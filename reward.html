@@ -27,9 +27,57 @@
     </div>
   </nav>
 
-  <div class="container">
-    
+  <div class="alert">
+    <span class="closebtn">&times;</span>  
+        <strong>Feitje!</strong> 
+        <br>
+        De bloemknoppen en jonge bloemen draaien langzaam mee met de zon als deze zich verplaatst van oost naar west. De zonnebloem bloeit op grote hoogte. Sommige soorten kunnen wel 3 meter hoog worden. De meesten groeien echter tot 1,5 tot 2,5 meter.
   </div>
+
+  <div class="flowers">
+    <div id="sunflower">
+      <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
+    </div>
+    <div id="rose">
+      <img src="/images/plants/rose-planted.png" alt="rose planted" height="110">
+    </div>
+    <div id="sunflower">
+      <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
+    </div>
+  </div>
+  <div class="flowers">
+    <div id="sunflower">
+      <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
+    </div>
+    <div id="rose">
+      <img src="/images/plants/rose-planted.png" alt="rose planted" height="110">
+    </div>
+    <div id="sunflower">
+      <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
+    </div>
+  </div>
+  <div class="flowers">
+    <div id="sunflower">
+      <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
+    </div>
+    <div id="rose">
+      <img src="/images/plants/rose-planted.png" alt="rose planted" height="110">
+    </div>
+    <div id="sunflower">
+      <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
+    </div>
+  </div>  <div class="flowers">
+    <div id="sunflower">
+      <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
+    </div>
+    <div id="rose">
+      <img src="/images/plants/rose-planted.png" alt="rose planted" height="110">
+    </div>
+    <div id="sunflower">
+      <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
+    </div>
+  </div>
+  
 
   <div class="bg">
     <div class="container-fluid d-flex flex-column">
@@ -69,7 +117,33 @@
 <style>
   body {
     background-image: url('/images/garden.jpg');
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
   }
   </style>
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+
+var open = document.getElementById("sunflower");
+var i;
+
+for (i = 0; i < open.length; i++) {
+  console.log("hij clickt");
+
+  open[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "100";
+    setTimeout(function(){ div.style.display = "display"; }, 600);
+  }
+}
+</script>

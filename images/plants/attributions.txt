@@ -1,0 +1,11 @@
+sunflower-add
+<a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by Freepik - Flaticon</a>
+
+sunflower-planted
+<a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by Freepik - Flaticon</a>
+
+rose-add
+<a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by Freepik - Flaticon</a>
+
+rose-planted
+<a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by adi_sena - Flaticon</a>

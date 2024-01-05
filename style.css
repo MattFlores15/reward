@@ -275,7 +275,6 @@ $card-height-mobile: 12rem; */
 }
 
 .alert {
-  display: none;
   padding: 20px;
   background-color: #0a9120;
   color: white;
@@ -299,4 +298,12 @@ $card-height-mobile: 12rem; */
 
 .closebtn:hover {
   color: black;
+}
+
+.factHide{
+  display: none;
+}
+
+.factShow{
+  display: block;
 }

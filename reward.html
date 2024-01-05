@@ -35,7 +35,7 @@
   </div>
 
   <div class="flowers">
-    <div id="sunflower">
+    <div id="sunflower" onclick="myFunction()">
       <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
     </div>
     <div id="rose">
@@ -124,28 +124,8 @@
   </style>
 
 <script>
-var close = document.getElementsByClassName("closebtn");
-var i;
-
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function(){
-    var div = document.getElementsByClassName("alert");
-    div.style.opacity = "0";
-    setTimeout(function(){ div.style.display = "none"; }, 600);
+function myFunction() {
+  var x = document.getElementsByClassName("alert");
+    x.style.display = "block";
   }
-}
-
-var open = document.getElementById("sunflower");
-var i;
-
-for (i = 0; i < open.length; i++) {
-
-  open[i].onmousedown = function(){
-    console.log("hij clickt");
-
-    var div = document.getElementsByClassName("alert");
-    div.style.opacity = "100";
-    setTimeout(function(){ div.style.display = "display"; }, 600);
-  }
-}
 </script>

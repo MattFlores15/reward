@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My PWA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Survey Results</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <!-- You can add more navbar items such as settings, notifications, etc. -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Survey Results</h2>
+    <div class="content-wrapper">
+  
+      <!-- First Survey Result Card -->
+      <div class="news-card">
+        <div class="news-card__text-wrapper">
+          <h2 class="news-card__title">Survey 1 Results</h2>
+          <div class="news-card__post-date">Date of Survey</div>
+          <!-- Replace this placeholder text with your graph data or any relevant content -->
+          <div class="news-card__details-wrapper">
+            <p class="news-card__excerpt">Graph or data visualization representing Survey 1 results.</p>
+            <a href="#" class="news-card__read-more">View Details <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Second Survey Result Card -->
+      <div class="news-card">
+        <div class="news-card__text-wrapper">
+          <h2 class="news-card__title">Survey 2 Results</h2>
+          <div class="news-card__post-date">Date of Survey</div>
+          <!-- Replace this placeholder text with your graph data or any relevant content -->
+          <div class="news-card__details-wrapper">
+            <p class="news-card__excerpt">Graph or data visualization representing Survey 2 results.</p>
+            <a href="#" class="news-card__read-more">View Details <i class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Add more survey result cards as needed -->
+      
+    </div>
+  </div>
+  
+  
+    
+  <div class="bg">
+    <div class="container-fluid d-flex flex-column">
+      <div class="row fixed-bottom bottom-buttons">
+        <div class="col-3">
+          <a href="home.html" class="btn text-center w-100">
+            <img src="home.png" alt="Home Icon" class="icon-img"> Home
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="surveys.html" class="btn text-center w-100">
+            <img src="surveys.png" alt="Surveys Icon" class="icon-img"> Surveys
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="results.html" class="btn text-center w-100">
+            <img src="results.png" alt="Results Icon" class="icon-img"> Results
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="news.html" class="btn text-center w-100">
+            <img src="news.png" alt="News Icon" class="icon-img"> News
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

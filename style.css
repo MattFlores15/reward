@@ -270,11 +270,11 @@ $card-height-mobile: 12rem; */
   flex-wrap: wrap;
   justify-content: space-around;
   padding-bottom: 75px;
-  z-index: 0;
   position: relative;
 }
 
-.alert {
+#alert {
+  display: none;
   padding: 20px;
   background-color: #0a9120;
   color: white;
@@ -298,12 +298,4 @@ $card-height-mobile: 12rem; */
 
 .closebtn:hover {
   color: black;
-}
-
-.factHide{
-  display: none;
-}
-
-.factShow{
-  display: block;
 }

@@ -27,13 +27,17 @@
     </div>
   </nav>
 
+  <div id="alert">
+    <span class="closebtn" onclick="hide()">&times;</span>  
+    <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+  </div>
 
   <div class="flowers">
     <div id="sunflower">
       <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
     </div>
     <div id="rose">
-      <img src="/images/plants/rose-planted.png" alt="rose planted" height="110" onclick="show_hide()">
+      <img src="/images/plants/rose-planted.png" alt="rose planted" height="110" onclick="show()">
     </div>
     <div id="sunflower">
       <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
@@ -121,18 +125,22 @@
   </style>
 
 <script>
-  var a;
-function show_hide()
+  let a = 1;
+
+function show()
 {
-if(a==1)
-{
-document.getElementById("sunflower").style.display="inline";
-return a=0;
+  if(a==1)
+  {
+    document.getElementById("alert").style.display="block";
+    return a=0;
+  }
 }
-else 
-{
-document.getElementById("sunflower").style.display="none";
-return a=1;
-}
+
+function hide(){
+  if(a==0)
+  {
+    document.getElementById("alert").style.display="none";
+    return a=1;
+  }
 }
 </script>

@@ -131,8 +131,9 @@ function show()
 {
   if(a==1)
   {
-    setTimeout(function(){document.getElementById("alert").style.opacity="100"}, 600);
+    setTimeout(function(){document.getElementById("alert").style.opacity="100"
     document.getElementById("alert").style.display="block";
+}, 600);
     return a=0;
   }
 }
@@ -140,8 +141,9 @@ function show()
 function hide(){
   if(a==0)
   {
-    setTimeout(function(){document.getElementById("alert").style.opacity="0"}, 600);
-    document.getElementById("alert").style.display="none";
+    setTimeout(function(){document.getElementById("alert").style.opacity="0"
+    document.getElementById("alert").style.display="none";}
+    , 600);
     return a=1;
   }
 }

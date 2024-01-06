@@ -9,3 +9,9 @@ rose-add
 
 rose-planted
 <a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by adi_sena - Flaticon</a>
+
+lavender-planted
+<a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by Freepik - Flaticon</a>
+
+lavender-add
+<a href="https://www.flaticon.com/free-icons/lavender" title="lavender icons">Lavender icons created by Kroffle - Flaticon</a>

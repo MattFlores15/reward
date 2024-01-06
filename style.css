@@ -300,3 +300,9 @@ $card-height-mobile: 12rem; */
 .closebtn:hover {
   color: black;
 }
+
+/* survey */
+.likert li {
+  float: left;
+  list-style-type: none;
+}

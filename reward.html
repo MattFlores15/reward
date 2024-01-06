@@ -33,8 +33,7 @@
       <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
     </div>
     <div id="rose">
-      <a href="rose-summary.html">
-      <img src="/images/plants/rose-planted.png" alt="rose planted" height="110"></a>
+      <img src="/images/plants/rose-planted.png" alt="rose planted" height="110" onclick="show_hide()">
     </div>
     <div id="sunflower">
       <img src="/images/plants/sunflower-planted.png" alt="sunflower planted" height="110">
@@ -120,3 +119,20 @@
     background-size: cover;
   }
   </style>
+
+<script>
+  var a;
+function show_hide()
+{
+if(a==1)
+{
+document.getElementById("sunflower").style.display="inline";
+return a=0;
+}
+else 
+{
+document.getElementById("sunflower").style.display="none";
+return a=1;
+}
+}
+</script>

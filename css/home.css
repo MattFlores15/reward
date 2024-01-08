@@ -1,5 +1,5 @@
 .available-surveys {
-    padding: 0 20px;
+    padding: 0 10px;
     display: flex;
     align-items: start;
     justify-content: start;
@@ -9,6 +9,10 @@
 
 .available-surveys p {
     align-self: center;
+    margin: 0 !important;
+}
+
+.available-surveys h2 {
     margin: 0 !important;
 }
 

@@ -1,14 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  padding-top: 70px;
-  /* Adjust the padding top to accommodate the fixed Navbar's height */
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   overscroll-behavior-x: none;
   height: 100vh;
   width: 100vw;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none !important;
 }
 
-
-
+body a {
+  text-decoration: none !important;
+}
 
 .text-center {
   display: flex;
@@ -31,12 +37,13 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  overflow-x: hidden !important;
 }
 
 .icon-img {
@@ -48,57 +55,6 @@ body {
   margin: 0 auto 5px;
   /* Center and add space below the image */
 }
-
-.available-surveys {
-  padding: 0 20px;
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  gap: 10px;
-  width: fit-content;
-}
-
-.available-surveys p {
-  align-self: center;
-  margin: 0 !important;
-}
-
-.container-available {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-  .filter-buttons {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    gap: 20px;
-    padding: 0 10px;
-    width: fit-content;
-  }
-  
-  .filter-buttons button {
-    margin-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: white;
-    border:2px solid #9A9AFF;
-    border-radius: 10px;
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
-    width: auto;
-    height: 40px;
-    align-content: center;
-  }
-
-  #to-do{
-    color: white;
-    background-color: #9A9AFF;
-  }
-
-  
-
   
   
   button:last-child {
@@ -125,31 +81,6 @@ body {
     padding: 0.5rem;
   }
   
-
-.available-buttons {
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  gap: 20px;
-  padding: 0 10px;
-  overflow-x: auto;
-  width: fit-content;
-}
-
-.available-buttons button {
-  margin-bottom: 10px;
-  padding: 10px 20px;
-  background-color: #9A9AFF;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  width: 200px;
-  height: auto;
-  align-content: center;
-}
-
 
 
 button:last-child {
@@ -179,44 +110,6 @@ button:last-child {
 
 
 
-
-/* progress bar surveys*/
-  .meter {
-    box-sizing: content-box;
-    height: 10px; /* Can be anything */
-    position: relative;
-    margin: 60px 0 20px 0; /* Just for demo spacing */
-    background: #b1b1b1;
-    border-radius: 15px;
-    padding: 5px;
-  }
-  .meter > span {
-    display: block;
-    height: 100%;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background-color: rgb(43, 194, 83);
-    background-image: linear-gradient(
-      center bottom,
-      rgb(43, 194, 83) 37%,
-      rgb(84, 240, 84) 69%
-    );
-    position: relative;
-    overflow: hidden;
-  }
-
-.progress-tags{
-  display: flex;
-  justify-content: space-between;
-}
-
-.progress-status{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 /*piechart*/
 
 

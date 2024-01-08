@@ -5,42 +5,40 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Reward system</title>
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="" href="/js/bottom-menu.js" />
+    <link rel="stylesheet" href="/css/surveys.css" type="text/css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    <script
+      src="https://kit.fontawesome.com/dd1d486564.js"
       crossorigin="anonymous"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    ></script>
+
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
+      <div class="container">
         <a class="navbar-brand" href="#">Surveys</a>
-        <button class="profile-button" >
+        <button class="profile-button">
           <span class="navbar-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-circle-user"></i
+              ></a>
             </li>
             <!-- You can add more navbar items such as settings, notifications, etc. -->
           </ul>
         </div>
       </div>
-      <i class="fa-so
-      lid fa-circle-user"></i>
     </nav>
 
-    <div class="container">
-      <div class="row mt-4">
+    <div class="main-container">
+      <div class="surveys-container mt-4">
         <div class="col-md-3 mb-3">
           <a href="survey-view.html" class="card-link">
             <div class="card">
@@ -49,7 +47,8 @@
                 class="card-img-top"
                 alt="Image 1"
                 height="100px"
-                width="100px"/>
+                width="100px"
+              />
               <div class="card-body">
                 <h5 class="card-title">Week 15</h5>
                 <p class="card-text">
@@ -63,61 +62,62 @@
 
         <div class="container-filter">
           <div class="filter-buttons">
-            <button id="to-filter">Filter</button>
+            <button id="to-filter">
+              <i class="fa-solid fa-filter"></i>Filter
+            </button>
             <button id="to-do">To Do</button>
             <button id="completed">Completed</button>
-      
           </div>
         </div>
 
-
-        <div class="col-md-3 mb-3">
-          <a href="results.html" class="card-link">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Completed Survey 10</h5>
-                <p class="card-text">Status: Completed</p>
-               
-               <div class="progress-status">
-                <div class="meter">
-                  <span style="width: 100%"></span>
-                </div>
-                <p>100%</p>
-               </div>
-                <div class="progress-tags">
-                  <p class="card-text">Type: Weekly</p>
+        <div class="survey-card-container">
+          <div class="survey-card">
+            <a href="results.html" class="card-link">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Completed Survey 10</h5>
                   <p class="card-text">Status: Completed</p>
-                </div>
-               
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 mb-3">
-          <a href="news.html" class="card-link">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Survey 11</h5>
-                <p class="card-text">Status: incompleted</p>
-                <div class="meter">
-                  <span style="width: 25%"></span>
+
+                  <div class="progress-status">
+                    <div class="meter">
+                      <span style="width: 100%"></span>
+                    </div>
+                    <p>100%</p>
+                  </div>
+                  <div class="progress-tags">
+                    <p class="card-text">Type: Weekly</p>
+                    <p class="card-text">Status: Completed</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 mb-3">
-          <a href="support.html" class="card-link">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Survey 12</h5>
-                <p class="card-text">Status: Completed</p>
-                <div class="meter">
-                  <span style="width: 100%"></span>
+            </a>
+          </div>
+          <div class="survey-card">
+            <a href="news.html" class="card-link">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Survey 11</h5>
+                  <p class="card-text">Status: incompleted</p>
+                  <div class="meter">
+                    <span style="width: 25%"></span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
+          <div class="survey-card">
+            <a href="support.html" class="card-link">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Survey 12</h5>
+                  <p class="card-text">Status: Completed</p>
+                  <div class="meter">
+                    <span style="width: 100%"></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>

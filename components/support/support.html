@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Reward system</title>
+    <link rel="stylesheet" href="/css/support.css" type="text/css" />
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
     <link rel="manifest" href="../../manifest.json" />
     <meta
       name="viewport"
@@ -17,13 +19,13 @@
     <div id="mobileMenuContainer"></div>
 
     <div class="container">
-      <div class="card mb-3" style="background-color: #72d9ff">
+      <div class="support-bg" >
         <div class="card-body">
           <h2 class="card-title text-center">Support</h2>
-          <h3 class="card-subtitle text-center mb-4">
+          <p class="card-subtitle text-center mb-4">
             Browse through our frequently asked questions, tutorials, and other
             self-help resources to find the answers you need.
-          </h3>
+          </p>
           <div class="input-group">
             <div class="form-outline">
               <input
@@ -34,11 +36,10 @@
               />
               <label class="form-label" for="form1">Search</label>
             </div>
-            <button
+            <button 
               id="search-button"
               type="button"
               class="btn btn-primary"
-              style="background-color: #9a9aff"
             >
               <i class="fas fa-search"></i>
             </button>
@@ -46,24 +47,38 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-4 mb-3">
+      <div class="col-md-3 mb-3">
+        <a href="/components/news/news.html" class="card-link">
           <div class="card">
-            <div class="card-body">Getting Started</div>
+            <div class="card-body">
+              <h5 class="card-title">Getting Started</h5>
+              <p>How do I access the surveys? </p>
+              <p>What type of surveys are available?</p>
+              <p>How can I track my progress?</p>
+              <p>Where can I find an overall progress?</p>
+              <p>How do I filter surveys by category?</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4 mb-3">
+        </a>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <a href="/components/news/news.html" class="card-link">
           <div class="card">
-            <div class="card-body">Card 2</div>
+            <div class="card-body">
+              <h5 class="card-title">Getting Started</h5>
+              <p>How do I access the surveys? </p>
+              <p>What type of surveys are available?</p>
+              <p>How can I track my progress?</p>
+              <p>Where can I find an overall progress?</p>
+              <p>How do I filter surveys by category?</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">Card 3</div>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
+    </div>
+    
 
     <!-- Include the mobile menu script -->
     <script>

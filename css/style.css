@@ -79,16 +79,22 @@ body {
   
   .filter-buttons button {
     margin-bottom: 10px;
-    padding: 10px 20px;
-    background-color: #9A9AFF;
-    border: none;
-    border-radius: 5px;
-    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    border:2px solid #9A9AFF;
+    border-radius: 10px;
+    color: black;
     font-size: 16px;
     cursor: pointer;
     width: auto;
     height: 40px;
     align-content: center;
+  }
+
+  #to-do{
+    color: white;
+    background-color: #9A9AFF;
   }
 
   
@@ -99,6 +105,26 @@ body {
     margin-bottom: 0;
   }
 
+  .profile-button {
+    background-color: #9A9AFF;
+    border: none;
+    border-radius: 80%; /* Circular border radius */
+    padding: 20px; /* Adjust padding as needed */
+    cursor: pointer;
+  }
+  
+
+
+
+  .content-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  
 
 .available-buttons {
   display: flex;
@@ -139,6 +165,7 @@ button:last-child {
   /* Adjust padding as needed */
   cursor: pointer;
 }
+
 
 
 .content-wrapper {

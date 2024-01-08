@@ -67,6 +67,21 @@ body {
     margin-bottom: 0;
   }
 
+  .profile-button {
+    background-color: #9A9AFF;
+    border: none;
+    border-radius: 80%; /* Circular border radius */
+    padding: 20px; /* Adjust padding as needed */
+    cursor: pointer;
+  }
+  
+  .navbar-icon {
+    /* Include your icon or adjust this style to display an icon */
+    /* Example: */
+    /* font-size: 20px; */
+    /* color: white; */
+  }
+
   /* news cards */
   /* .service {
     padding-top: 180px;

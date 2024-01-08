@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-    gap: 20px;
+    gap: 10px;
     padding: 0 10px;
     width: fit-content;
 }
@@ -12,7 +12,8 @@
     padding-left: 10px;
     padding-right: 10px;
     background-color: white;
-    border: 2px solid #9A9AFF;
+    border: 2px solid #f0f0f0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     color: black;
     font-size: 16px;
@@ -25,6 +26,8 @@
 #to-do {
     color: white;
     background-color: #9A9AFF;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .surveys-container{
@@ -32,15 +35,20 @@
     flex-direction: column;
     margin-top: 20px;
     gap: 20px;
-    padding: 0 10px;
+    padding: 0 !important;
     width: fit-content;
+    margin: auto;
 }
 
 .survey-card-container{
     display: flex;
     flex-direction: column-reverse;
     gap: 20px;
-    padding: 0 10px;
+    padding: 0 !important;
+}
+
+.survey-card{
+    width: 100%;
 }
 
 .card {
@@ -55,6 +63,20 @@
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 0.25rem;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card p{
+    text-decoration: none !important;
+}
+
+.card-body {
+   width: 100%;
+}
+
+.chart-title{
+    font-weight: 700;
+    color: #9A9AFF;
+    align-self: flex-start;
 }
 
 .mt-4 {
@@ -93,12 +115,28 @@
     display: block;
     height: 100%;
     border-radius: 8px;
-    background-color: rgb(43, 194, 83);
+    background-color: #14A38B;
     background-image: linear-gradient(center bottom,
-            rgb(43, 194, 83) 37%,
+            #14A38B 37%,
             rgb(84, 240, 84) 69%);
     position: relative;
     overflow: hidden;
+}
+
+#percentage-55{
+    background-color: #9A9AFF;
+}
+
+#percentage-18 {
+    background-color: darkred;
+}
+
+#text-55{
+    color: #9A9AFF;
+}
+
+#text-18{
+    color: darkred;
 }
 
 .progress-tags {
@@ -110,5 +148,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.progress-status p {
+    margin: 0;
+    color: #14A38B;
+    margin-left: 5px;
+    font-weight: 500;
 }
 

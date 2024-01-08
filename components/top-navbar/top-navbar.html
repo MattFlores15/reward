@@ -1,3 +1,4 @@
+<!-- top-navbar.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,11 +15,38 @@
     <!-- top-navbar.html -->
     <div class="mobile-navbar">
       <div class="container-fluid">
-        <div class="navbar-brand"><h2>Home</h2></div>
+        <div class="navbar-brand"><h2 id="page-title"></h2></div>
         <button class="profile-button">
           <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
         </button>
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const pageTitleElement = document.getElementById("page-title");
+        const menuItems = document.querySelectorAll(".custom-btn");
+
+        menuItems.forEach((item) => {
+          item.addEventListener("click", function (event) {
+            event.preventDefault();
+            const href = item.parentElement.getAttribute("href");
+            const pageTitle = item.querySelector("p").textContent;
+            navigateToPage(href, pageTitle);
+          });
+        });
+
+        function navigateToPage(page, pageTitle) {
+          loadPageContent(page);
+          pageTitleElement.textContent = pageTitle;
+          history.pushState(null, null, page);
+        }
+
+        function loadPageContent(url) {
+          // For simplicity, let's assume you have a function loadPage(url) to load the content
+          console.log("Loading content for:", url);
+        }
+      });
+    </script>
   </body>
 </html>

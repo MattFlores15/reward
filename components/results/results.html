@@ -22,34 +22,10 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Survey Results</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-            <!-- You can add more navbar items such as settings, notifications, etc. -->
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- Include the mobile menu -->
+    <div id="mobileMenuContainer"></div>
 
+    <div class="container">
     <div class="row mt-4">
       <div class="col-md-3 mb-3">
         <a href="/components/surveys/surveys.html" class="card-link">
@@ -90,8 +66,15 @@
         </a>
       </div>
     </div>
+    </div>
   </div>
 
+  <!-- Include the mobile menu script -->
+    <script>
+      document.getElementById("mobileMenuContainer").innerHTML = `
+        <iframe src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70"></iframe>
+      `;
+    </script>
 
     <!-- Include the mobile bottom menu -->
     <div id="mobileBottomMenuContainer"></div>

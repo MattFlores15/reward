@@ -15,73 +15,56 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Rewards</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-            <!-- You can add more navbar items such as settings, notifications, etc. -->
-          </ul>
+    <!-- Include the mobile menu -->
+    <div id="mobileMenuContainer"></div>
+
+    <div class="container">
+      <div id="alert">
+        <span class="closebtn" onclick="hide()">&times;</span>
+        <strong>Wist je dat?</strong>
+        <br /><br />
+        Wist je dat rozen in Nederland bekend zijn vanaf de zestiende eeuw. Toen
+        werden rozen vooral geteeld in formele paleistuinen. In 1829 bestonden
+        er al 2562 verschillende soorten rozen. Maar mogelijk is de teelt van
+        rozen al zo'n 5000 jaar geleden in de buurt van de Indus-vallei of in
+        China voor het eerst ontstaan.
+      </div>
+
+      <div class="flowers">
+        <div id="sunflower">
+          <a href="sunflower-summary.html">
+            <img
+              src="/images/plants/sunflower-planted.png"
+              alt="sunflower planted"
+              height="110"
+            />
+          </a>
+        </div>
+        <div id="rose">
+          <a href="rose-summary.html">
+            <img
+              src="/images/plants/rose-planted.png"
+              alt="rose planted"
+              height="110"
+          /></a>
+        </div>
+        <div id="lavender">
+          <a href="lavender-summary.html">
+            <img
+              src="/images/plants/lavender-planted.png"
+              alt="lavender planted"
+              height="110"
+          /></a>
         </div>
       </div>
-    </nav>
-
-    <div id="alert">
-      <span class="closebtn" onclick="hide()">&times;</span>
-      <strong>Wist je dat?</strong>
-      <br /><br />
-      Wist je dat rozen in Nederland bekend zijn vanaf de zestiende eeuw. Toen
-      werden rozen vooral geteeld in formele paleistuinen. In 1829 bestonden er
-      al 2562 verschillende soorten rozen. Maar mogelijk is de teelt van rozen
-      al zo'n 5000 jaar geleden in de buurt van de Indus-vallei of in China voor
-      het eerst ontstaan.
     </div>
 
-    <div class="flowers">
-      <div id="sunflower">
-        <a href="sunflower-summary.html">
-          <img
-            src="/images/plants/sunflower-planted.png"
-            alt="sunflower planted"
-            height="110"
-          />
-        </a>
-      </div>
-      <div id="rose">
-        <a href="rose-summary.html">
-          <img
-            src="/images/plants/rose-planted.png"
-            alt="rose planted"
-            height="110"
-        /></a>
-      </div>
-      <div id="lavender">
-        <a href="lavender-summary.html">
-          <img
-            src="/images/plants/lavender-planted.png"
-            alt="lavender planted"
-            height="110"
-        /></a>
-      </div>
-    </div>
-
+    <!-- Include the mobile menu script -->
+    <script>
+      document.getElementById("mobileMenuContainer").innerHTML = `
+        <iframe src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70"></iframe>
+      `;
+    </script>
     <!-- Include the mobile bottom menu -->
     <div id="mobileBottomMenuContainer"></div>
     <script>

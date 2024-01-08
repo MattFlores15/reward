@@ -1,94 +1,108 @@
 body {
-    padding-top: 70px; /* Adjust the padding top to accommodate the fixed Navbar's height */
-    overflow-x: hidden;
-    overscroll-behavior-x: none;
-    height: 100vh;
-    width: 100vw;
-  }
-
-
-
-.text-center{
-    display: flex;
-    flex-direction: column;
-/*    align-items: center;*/
-    gap: 20px;
+  padding-top: 70px;
+  /* Adjust the padding top to accommodate the fixed Navbar's height */
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  height: 100vh;
+  width: 100vw;
 }
 
-.text{
-    text-align: center;
+.mobile-navbar {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  position: fixed;
+
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
- 
+
+.mobile-navbar a {
+  text-decoration: none;
+  color: #343a40;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.profile-button {
+  background-color: #9A9AFF;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.navbar-icon {
+  /* Include your icon or adjust this style to display an icon */
+  /* Example: */
+  /* font-size: 20px; */
+  /* color: white; */
+}
+
+
+.text-center {
+  display: flex;
+  flex-direction: column;
+  /*    align-items: center;*/
+  gap: 20px;
+}
+
+.text {
+  text-align: center;
+}
+
 .img-resize {
-      width: 80%;
-      height: auto;
-    }
+  width: 80%;
+  height: auto;
+}
 
 .bottom-buttons {
- background-color: #72D9FF;
+  background-color: #72D9FF;
 }
 
-.container{
+.container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 100px;
-    
 }
 
 .icon-img {
-    display: block;
-    width: 40px; /* Adjust icon width */
-    height: 10px; /* Maintain aspect ratio */
-    margin: 0 auto 5px; /* Center and add space below the image */
-  }
+  display: block;
+  width: 40px;
+  /* Adjust icon width */
+  height: 10px;
+  /* Maintain aspect ratio */
+  margin: 0 auto 5px;
+  /* Center and add space below the image */
+}
 
-  .available-surveys{
-    padding: 0 20px ;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    gap: 10px;
-    width: fit-content;
-  }
-  .available-surveys p{
-    align-self: center;
-    margin: 0 !important;
-  }
-  
-  .container-available{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-  
+.available-surveys {
+  padding: 0 20px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  width: fit-content;
+}
 
-  .available-buttons {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    gap: 20px;
-    padding: 0 10px;
-    overflow-x: auto;
-    width: fit-content;
-  }
-  
-  .available-buttons button {
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    background-color: #9A9AFF;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    width: 200px;
-    height: auto;
-    align-content: center;
-  }
+.available-surveys p {
+  align-self: center;
+  margin: 0 !important;
+}
 
+.container-available {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
   .filter-buttons {
     display: flex;
     flex-direction: row;
@@ -120,6 +134,7 @@ body {
     margin-bottom: 0;
   }
 
+<<<<<<< HEAD
   .profile-button {
     background-color: #9A9AFF;
     border: none;
@@ -140,6 +155,60 @@ body {
     padding: 0.5rem;
   }
   
+=======
+
+.available-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 20px;
+  padding: 0 10px;
+  overflow-x: auto;
+  width: fit-content;
+}
+
+.available-buttons button {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #9A9AFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+  height: auto;
+  align-content: center;
+}
+
+
+
+button:last-child {
+  margin-bottom: 0;
+}
+
+.profile-button {
+  background-color: #9A9AFF;
+  border: none;
+  border-radius: 80%;
+  /* Circular border radius */
+  padding: 20px;
+  /* Adjust padding as needed */
+  cursor: pointer;
+}
+
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+
+>>>>>>> a0521ce6757f9260992bb868d76f7536f9f439ff
 
 
 /* progress bar surveys*/
@@ -169,12 +238,13 @@ body {
     overflow: hidden;
   }
 
+
 /*piechart*/
 
 
 
 /* Rewards*/
-.flowers{
+.flowers {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -231,17 +301,17 @@ body {
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
-.mt-4{
+.mt-4 {
   padding: 0 20px;
   gap: 20px;
   
 }
 
-.card-text{
+.card-text {
   color: #969393;
 }
 
-.card-title{
+.card-title {
   font-weight: 700;
   color: #242425;
 }

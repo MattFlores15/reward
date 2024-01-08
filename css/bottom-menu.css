@@ -6,6 +6,9 @@
     right: 0;
     position: fixed;
     text-decoration: none !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    border-top: #9A9AFF 2px solid;
 }
 .custom-bottom-buttons {
     display: flex;
@@ -38,7 +41,6 @@
     padding: 10px 0;
     cursor: pointer;
     color: #FFFFFF;
-    gap: 5px;
 }
 
 .custom-btn p {
@@ -52,13 +54,16 @@
 #home-button{
     background-color: #9A9AFF;
     border-radius: 50%;
-    padding: 30px;
+    padding: 20px 22px;
     width: 100%;
     display: flex;
     height: auto;
     align-content: baseline;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+
 
 .custom-icon {
     display: block;

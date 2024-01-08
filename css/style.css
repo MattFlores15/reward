@@ -345,12 +345,12 @@ $card-height-mobile: 12rem; */
 /* progress bar surveys*/
   .meter {
     box-sizing: content-box;
-    height: 20px; /* Can be anything */
+    height: 10px; /* Can be anything */
     position: relative;
     margin: 60px 0 20px 0; /* Just for demo spacing */
     background: #b1b1b1;
-    border-radius: 25px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 5px;
   }
   .meter > span {
     display: block;

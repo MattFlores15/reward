@@ -1,0 +1,114 @@
+.filter-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 20px;
+    padding: 0 10px;
+    width: fit-content;
+}
+
+.filter-buttons button {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    border: 2px solid #9A9AFF;
+    border-radius: 10px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    height: 40px;
+    align-content: center;
+}
+
+#to-do {
+    color: white;
+    background-color: #9A9AFF;
+}
+
+.surveys-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+    padding: 0 10px;
+    width: fit-content;
+}
+
+.survey-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.card {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mt-4 {
+    padding: 0 20px;
+    gap: 20px;
+
+}
+
+.card-text {
+    color: #969393;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #242425;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+/* progress bar surveys*/
+.meter {
+    box-sizing: content-box;
+    height: 10px;
+    /* Can be anything */
+    position: relative;
+    width: 100%;
+    background: #b1b1b1;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.meter>span {
+    display: block;
+    height: 100%;
+    border-radius: 8px;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(center bottom,
+            rgb(43, 194, 83) 37%,
+            rgb(84, 240, 84) 69%);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-tags {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

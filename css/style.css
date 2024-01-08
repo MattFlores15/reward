@@ -16,12 +16,14 @@ body a {
   text-decoration: none !important;
 }
 
+
 .text-center {
   display: flex;
   flex-direction: column;
   /*    align-items: center;*/
   gap: 20px;
 }
+
 
 .text {
   text-align: center;

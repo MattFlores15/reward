@@ -16,6 +16,27 @@ body a {
   text-decoration: none !important;
 }
 
+#mobileMenuContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+#mobileBottomMenuContainer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+#mobileBottomMenuContainer iframe{
+  position: fixed;
+  bottom: 0;
+}
+
 
 .text-center {
   display: flex;
@@ -39,6 +60,7 @@ body a {
 }
 
 .container {
+  padding:80px 0;
   width: 100vw;
   padding-right: 15px;
   padding-left: 15px;

@@ -6,8 +6,6 @@ body {
 
 
 
-<<<<<<< HEAD
-=======
 .text-center{
     display: flex;
     flex-direction: column;
@@ -44,7 +42,6 @@ body {
     height: 10px; /* Maintain aspect ratio */
     margin: 0 auto 5px; /* Center and add space below the image */
   }
->>>>>>> b7da0a94cc69a9083426d5aba44ffb2975e983b5
 
   .buttons {
     display: flex;

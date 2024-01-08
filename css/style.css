@@ -3,48 +3,7 @@ body {
   }
 
 
-.img-resize {
-    margin-top: 200px;
-    width: 50%; /* Set the image width to 50% */
-    display: block; /* Ensure the image behaves as a block element */
-    margin: 0 auto; /* Center the image horizontally */
-  }
 
-.text-center{
-    display: flex;
-    flex-direction: column;
-/*    align-items: center;*/
-    gap: 20px;
-}
-
-.text{
-    text-align: center;
-}
- 
-.img-resize {
-      width: 80%;
-      height: auto;
-    }
-
-.bottom-buttons {
- background-color: #72D9FF;
-}
-
-.container{
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-    
-}
-
-.icon-img {
-    display: block;
-    width: 40px; /* Adjust icon width */
-    height: 10px; /* Maintain aspect ratio */
-    margin: 0 auto 5px; /* Center and add space below the image */
-  }
 
 
   /* news cards */
@@ -112,20 +71,7 @@ body {
 
   */
 
-  @use postcss-mixins;
-@use postcss-nested;
-@use postcss-simple-vars;
 
-@define-mixin atMedium {
-  @media (min-width: 600px) {
-    @mixin-content;
-  }
-}
-@define-mixin atLarge {
-  @media (min-width: 900px) {
-    @mixin-content;
-  }
-}
 
 /* $card-height-large-screen: 20rem;
 $card-height-mobile: 12rem; */

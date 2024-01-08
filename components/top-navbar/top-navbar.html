@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mobile Bottom Menu</title>
+    <title>Mobile Top Menu</title>
     <link rel="stylesheet" href="/css/top-navbar.css" type="text/css" />
     <script
       src="https://kit.fontawesome.com/dd1d486564.js"
@@ -20,33 +20,19 @@
           <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
         </button>
       </div>
-    </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const pageTitleElement = document.getElementById("page-title");
-        const menuItems = document.querySelectorAll(".custom-btn");
-
-        menuItems.forEach((item) => {
-          item.addEventListener("click", function (event) {
-            event.preventDefault();
-            const href = item.parentElement.getAttribute("href");
-            const pageTitle = item.querySelector("p").textContent;
-            navigateToPage(href, pageTitle);
-          });
+      <script>
+        // Listen for messages from the parent document
+        window.addEventListener("message", function (event) {
+          if (event.data && event.data.type === "updateTitle") {
+            // Update the h2 element with the received title
+            const pageTitleElement = document.getElementById("page-title");
+            if (pageTitleElement) {
+              pageTitleElement.innerText = event.data.title;
+            }
+          }
         });
-
-        function navigateToPage(page, pageTitle) {
-          loadPageContent(page);
-          pageTitleElement.textContent = pageTitle;
-          history.pushState(null, null, page);
-        }
-
-        function loadPageContent(url) {
-          // For simplicity, let's assume you have a function loadPage(url) to load the content
-          console.log("Loading content for:", url);
-        }
-      });
-    </script>
+      </script>
+    </div>
   </body>
 </html>

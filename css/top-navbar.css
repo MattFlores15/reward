@@ -6,6 +6,7 @@
     /* Adjust text color */
     padding: 10px 20px;
     width: 100vw;
+    height: 50px;
     margin-left: none;
     position: fixed;
     top: 0;
@@ -15,6 +16,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.container-fluid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
 }
 
 .mobile-navbar a {

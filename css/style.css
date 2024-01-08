@@ -43,6 +43,26 @@ body {
     margin: 0 auto 5px; /* Center and add space below the image */
   }
 
+  .available-surveys{
+    padding: 0 20px ;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    width: fit-content;
+  }
+  .available-surveys p{
+    align-self: center;
+    margin: 0 !important;
+  }
+  
+  .container-available{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+
   .available-buttons {
     display: flex;
     flex-direction: row;
@@ -50,6 +70,7 @@ body {
     gap: 20px;
     padding: 0 10px;
     overflow-x: auto;
+    width: fit-content;
   }
   
   .available-buttons button {
@@ -61,7 +82,12 @@ body {
     color: white;
     font-size: 16px;
     cursor: pointer;
+    width: 200px;
+    height: auto;
+    align-content: center;
   }
+
+  
   
   button:last-child {
     margin-bottom: 0;
@@ -356,3 +382,6 @@ $card-height-mobile: 12rem; */
   font-weight: 700;
   color: #242425;
 }
+
+
+

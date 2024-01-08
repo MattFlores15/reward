@@ -6,12 +6,11 @@
     <title>Reward system</title>
     <link rel="stylesheet" href="/css/bottom-menu.css" type="text/css" />
     <link rel="manifest" href="../../manifest.json" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    <link rel="stylesheet" href="your-custom-styles.css" />
+    <script
+      src="https://kit.fontawesome.com/dd1d486564.js"
       crossorigin="anonymous"
-    />
+    ></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -19,39 +18,38 @@
   </head>
   <body>
     <div class="bg">
-      <div class="container-fluid d-flex flex-column">
-        <div class="row fixed-bottom bottom-buttons">
+      <div class="container d-flex flex-column">
+        <div class="row fixed-bottom custom-bottom-buttons">
           <div class="col-3">
-            <a href="home.html">
-              <button class="btn text-center w-100">
-                <img src="home.png" alt="Home Icon" class="icon-img" /> Home
+            <a href="/components/home/home.html">
+              <button class="custom-btn text-center">
+                <i class="custom-icon fa-solid fa-table-columns"></i>
+                <p>Home</p>
               </button>
             </a>
           </div>
           <div class="col-3">
-            <a href="surveys.html">
-              <button class="btn text-center w-100">
-                <img src="home.png" alt="Home Icon" class="icon-img" /> Survey
+            <a href="/components/surveys/surveys.html">
+              <button class="custom-btn text-center">
+                <i class="custom-icon fa-solid fa-clipboard-check"></i>
+                <p>Survey</p>
               </button>
             </a>
           </div>
           <div class="col-3">
-            <a href="results.html">
-              <button class="btn text-center w-100">
-                <img src="home.png" alt="Home Icon" class="icon-img" /> Results
+            <a href="/components/results/results.html">
+              <button class="custom-btn text-center">
+                <i class="custom-icon fa-solid fa-square-poll-vertical"></i>
+                <p>Results</p>
               </button>
             </a>
           </div>
           <div class="col-3">
-            <a href="news.html">
-              <button class="btn text-center w-100">
-                <img src="home.png" alt="Home Icon" class="icon-img" /> News
+            <a href="/components/news/news.html">
+              <button class="custom-btn text-center">
+                <i class="custom-icon fa-solid fa-newspaper"></i>
+                <p>News</p>
               </button>
-            </a>
-          </div>
-          <div class="col-3">
-            <a href="reward.html" class="btn text-center w-100">
-              <img src="reward.png" alt="Reward Icon" class="icon-img" /> Reward
             </a>
           </div>
         </div>

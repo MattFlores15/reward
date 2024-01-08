@@ -1,0 +1,29 @@
+.support-bg{
+    display: flex;
+    justify-content: center;
+    background-image: url(/images/supportbg.jpg);
+    object-fit: cover;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.container{
+    padding: 200px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction:row;
+}
+
+#search-button{
+    background-color: #9A9AFF;
+    
+}

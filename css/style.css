@@ -207,7 +207,16 @@ button:last-child {
     overflow: hidden;
   }
 
+.progress-tags{
+  display: flex;
+  justify-content: space-between;
+}
 
+.progress-status{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /*piechart*/
 
 

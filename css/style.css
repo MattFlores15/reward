@@ -103,6 +103,36 @@ body {
   flex-direction: column;
   margin-top: 20px;
 }
+  .filter-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 20px;
+    padding: 0 10px;
+    width: fit-content;
+  }
+  
+  .filter-buttons button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #9A9AFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    height: 40px;
+    align-content: center;
+  }
+
+  
+
+  
+  
+  button:last-child {
+    margin-bottom: 0;
+  }
 
 
 .available-buttons {
@@ -370,7 +400,44 @@ $card-height-mobile: 12rem; */
       color: yellow;
     }
   }
+<<<<<<< HEAD
 }
+=======
+  
+
+
+
+/* progress bar surveys*/
+  .meter {
+    box-sizing: content-box;
+    height: 10px; /* Can be anything */
+    position: relative;
+    margin: 60px 0 20px 0; /* Just for demo spacing */
+    background: #b1b1b1;
+    border-radius: 15px;
+    padding: 5px;
+  }
+  .meter > span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43, 194, 83) 37%,
+      rgb(84, 240, 84) 69%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+
+/*piechart*/
+
+
+>>>>>>> 0757a7681e704571a1adeb27c67b82dd6675287e
 
 /* Rewards*/
 .flowers {
@@ -418,6 +485,7 @@ $card-height-mobile: 12rem; */
 
 .card {
   padding: 20px;
+<<<<<<< HEAD
   position: relative;
   display: flex;
   flex-direction: column;
@@ -427,11 +495,24 @@ $card-height-mobile: 12rem; */
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, .125);
   border-radius: 0.25rem;
+=======
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+>>>>>>> 0757a7681e704571a1adeb27c67b82dd6675287e
 }
 
 .mt-4 {
   padding: 0 20px;
   gap: 20px;
+  
 }
 
 .card-text {
@@ -441,4 +522,14 @@ $card-height-mobile: 12rem; */
 .card-title {
   font-weight: 700;
   color: #242425;
+<<<<<<< HEAD
 }
+=======
+}
+
+ 
+
+
+
+
+>>>>>>> 0757a7681e704571a1adeb27c67b82dd6675287e

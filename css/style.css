@@ -99,6 +99,28 @@ body {
     margin-bottom: 0;
   }
 
+<<<<<<< HEAD
+  .profile-button {
+    background-color: #9A9AFF;
+    border: none;
+    border-radius: 80%; /* Circular border radius */
+    padding: 20px; /* Adjust padding as needed */
+    cursor: pointer;
+  }
+  
+
+
+
+  .content-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  
+=======
 
 .available-buttons {
   display: flex;
@@ -151,6 +173,7 @@ button:last-child {
 }
 
 
+>>>>>>> a0521ce6757f9260992bb868d76f7536f9f439ff
 
 
 /* progress bar surveys*/
@@ -258,6 +281,10 @@ button:last-child {
   color: #242425;
 }
 
+.card-img-top{
+  width: 100%;
+  height: auto;
+}
  
 
 

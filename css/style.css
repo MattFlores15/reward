@@ -43,7 +43,7 @@ body {
     margin: 0 auto 5px; /* Center and add space below the image */
   }
 
-  .buttons {
+  .available-buttons {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
@@ -52,7 +52,7 @@ body {
     overflow-x: auto;
   }
   
-  button {
+  .available-buttons button {
     margin-bottom: 10px;
     padding: 10px 20px;
     background-color: #9A9AFF;
@@ -65,6 +65,21 @@ body {
   
   button:last-child {
     margin-bottom: 0;
+  }
+
+  .profile-button {
+    background-color: #9A9AFF;
+    border: none;
+    border-radius: 80%; /* Circular border radius */
+    padding: 20px; /* Adjust padding as needed */
+    cursor: pointer;
+  }
+  
+  .navbar-icon {
+    /* Include your icon or adjust this style to display an icon */
+    /* Example: */
+    /* font-size: 20px; */
+    /* color: white; */
   }
 
   /* news cards */
@@ -313,4 +328,31 @@ $card-height-mobile: 12rem; */
   float: left;
   list-style-type: none;
   margin-left: 20px;
+}
+
+.card {
+  padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.mt-4{
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.card-text{
+  color: #969393;
+}
+
+.card-title{
+  font-weight: 700;
+  color: #242425;
 }

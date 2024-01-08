@@ -89,6 +89,31 @@ body {
     align-content: center;
   }
 
+  .filter-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 20px;
+    padding: 0 10px;
+    width: fit-content;
+  }
+  
+  .filter-buttons button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #9A9AFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    height: 40px;
+    align-content: center;
+  }
+
+  
+
   
   
   button:last-child {
@@ -314,6 +339,40 @@ $card-height-mobile: 12rem; */
     }
   }
   
+
+
+
+/* progress bar surveys*/
+  .meter {
+    box-sizing: content-box;
+    height: 20px; /* Can be anything */
+    position: relative;
+    margin: 60px 0 20px 0; /* Just for demo spacing */
+    background: #b1b1b1;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  .meter > span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43, 194, 83) 37%,
+      rgb(84, 240, 84) 69%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+
+/*piechart*/
+
+
+
 /* Rewards*/
 .flowers{
   display: flex;

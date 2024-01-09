@@ -21,12 +21,12 @@
 
     <div class="reward-container">
       <div class="flowers-container">
-        <div id="alert" class="modal">
+        <div id="alertRose" class="modal">
           <div class="modal-container">
-            <span class="closebtn" onclick="hide()">&times;</span>
+            <span class="closebtn" onclick="hideRose()">&times;</span>
             <img
               class="img-fluid img-resize"
-              src="/images/plants/sunflower-planted.png"
+              src="/images/plants/rose-planted.png"
               alt="..."
             />
             <h2>Wist je dat?</h2>
@@ -40,10 +40,46 @@
             </p>
           </div>
         </div>
+        <div id="alertSunflower" class="modal">
+          <div class="modal-container">
+            <span class="closebtn" onclick="hideSunflower()">&times;</span>
+            <img
+              class="img-fluid img-resize"
+              src="/images/plants/sunflower-planted.png"
+              alt="..."
+            />
+            <h2>Wist je dat?</h2>
+            <br /><br />
+            <p>
+              De bloemknoppen en jonge bloemen draaien langzaam mee met de zon als deze zich
+              verplaatst van oost naar west. De zonnebloem bloeit op grote hoogte. Sommige
+              soorten kunnen wel 3 meter hoog worden. De meesten groeien echter tot 1,5
+              tot 2,5 meter.
+            </p>
+          </div>
+        </div>
+        <div id="alertLavender" class="modal">
+          <div class="modal-container">
+            <span class="closebtn" onclick="hideLavender()">&times;</span>
+            <img
+              class="img-fluid img-resize"
+              src="/images/plants/lavender-planted.png"
+              alt="..."
+            />
+            <h2>Wist je dat?</h2>
+            <br /><br />
+            <p>
+              Lavendel wordt door veel mensen gezien als medicinaal middel.
+              Het zou kalmerend zijn voor de zenuwen en het zou de geest in balans brengen.
+              Tip: leg een takje lavendel naast je kussen in bed. Geeft een rustig gevoel én een fijn geurtje! 
+              Je treft het zo nu en dan ook in Franse hotels aan.
+            </p>
+          </div>
+        </div>
 
         <div class="flowers">
           <div id="sunflower">
-            <div onclick="show()">
+            <div onclick="showSunflower()">
               <img
                 src="/images/plants/sunflower-planted.png"
                 alt="sunflower planted"
@@ -52,7 +88,7 @@
             </div>
           </div>
           <div id="rose">
-            <div onclick="show()">
+            <div onclick="showRose()">
               <img
                 src="/images/plants/rose-planted.png"
                 alt="rose planted"
@@ -61,7 +97,7 @@
             </div>
           </div>
           <div id="lavender">
-            <div onclick="show()">
+            <div onclick="showLavender()">
               <img
                 src="/images/plants/lavender-planted.png"
                 alt="lavender planted"
@@ -71,6 +107,7 @@
           </div>
         </div>
       </div>
+      
     </div>
 
     <!-- Include the mobile top menu -->
@@ -105,21 +142,53 @@
     </script>
 
     <script>
-      let modalVisible = false;
+      let roseVisible = false;
+      let sunVisible = false;
+      let lavenderVisible = false;
 
-      function show() {
-        if (!modalVisible) {
-          document.getElementById("alert").style.display = "flex";
-          modalVisible = true;
+      function showRose() {
+        if (!roseVisible) {
+          document.getElementById("alertRose").style.display = "flex";
+          roseVisible = true;
         }
       }
 
-      function hide() {
-        if (modalVisible) {
-          document.getElementById("alert").style.display = "none";
-          modalVisible = false;
+      function showSunflower(){
+        if (!sunVisible){
+          document.getElementById("alertSunflower").style.display = "flex";
+          sunVisible = true;
         }
       }
+
+      function showLavender(){
+        if (!lavenderVisible){
+          document.getElementById("alertLavender").style.display = "flex";
+          lavenderVisible = true;
+          }
+      }
+    
+
+      function hideRose() {
+        if (roseVisible) {
+          document.getElementById("alertRose").style.display = "none";
+          roseVisible = false;
+        }
+      }
+
+      function hideLavender(){
+        if (lavenderVisible) {
+          document.getElementById("alertLavender").style.display = "none";
+          lavenderVisible = false;
+        }
+      }
+
+      function hideSunflower(){
+        if (sunVisible) {
+          document.getElementById("alertSunflower").style.display = "none";
+          sunVisible = false;
+        }
+      }
+      
     </script>
 
     <style>
@@ -130,20 +199,18 @@
       }
 
       .reward-container {
-        padding-top: 50px;
         display: flex;
-        justify-content: center;
         align-items: start;
         height: 100%;
       }
 
       .flowers-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        height: fit-content;
-        width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: stretch;
+          height: fit-content;
+          width: 100%;
       }
 
       .modal {

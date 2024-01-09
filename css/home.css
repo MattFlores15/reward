@@ -1,3 +1,33 @@
+
+
+.welcome-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.welcome-card .card{  
+   flex-direction: row;
+   justify-content: space-between;
+   border-radius: 10px;
+/* Replace #72D9FF with your desired color */
+    background: linear-gradient(to bottom, #72D9FF, #C8F0FF);
+}
+
+.welcome-image{
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.welcome-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .available-surveys {
     padding: 0 10px;
     display: flex;
@@ -17,7 +47,7 @@
     margin: 0 !important;
 }
 
-.available-surveys h2 {
+.available-surveys h3 {
     margin: 0 !important;
 }
 

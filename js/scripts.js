@@ -11,3 +11,45 @@ if("serviceWorker" in navigator){
     //The registration of the service worker failed
     console.log("Browser: I don't support Service Workers :(");
   }
+
+/////////////////SURVEYS PAGE///////////////////
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-buttons button, #all");
+    const surveyCards = document.querySelectorAll(".survey-card");
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        // Remove active class from all buttons
+        filterButtons.forEach(function (btn) {
+          btn.classList.remove("active-button");
+        });
+
+        // Add active class to the clicked button
+        button.classList.add("active-button");
+
+        // Filter cards based on button clicked
+        const status = button.textContent.trim();
+
+        if (status === "All") {
+          surveyCards.forEach(function (card) {
+            card.style.display = "flex";
+          });
+        } else {
+          toggleCardsByStatus(status);
+        }
+      });
+    });
+
+    function toggleCardsByStatus(status) {
+      surveyCards.forEach(function (card) {
+        const cardStatus = card.querySelector(".progress-tags p:last-child").textContent.trim();
+
+        if ((status === "To Do" && cardStatus === "Status: To Do") || (status === "Completed" && cardStatus === "Status: Completed")) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  });
+

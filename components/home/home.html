@@ -1,117 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Home</title>
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  <link rel="stylesheet" href="/css/home.css" type="text/css">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/css/home.css" type="text/css" />
+    <link rel="manifest" href="../../manifest.json" />
+
+    <script
+      src="https://kit.fontawesome.com/dd1d486564.js"
+      crossorigin="anonymous"
+    ></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
   </head>
   <body>
-    <!-- Include the mobile menu -->
+    <!-- Include the mobile top menu -->
     <div id="mobileMenuContainer"></div>
 
-
-  <div class="container">
-    <div class="grid">
-      <div class="card">
-        <span class="icon">
-          
-        </span>
-        <h2><span style="color: #72D9FF;">Welcome </span><span style="color: black;">Back!</span></h2>
-        <p>
-          Hi, User
-        </p>
-        
-      </div>
-      
-    </div>
-
-
-  <div class="home-container">
-    <div class="container-available">
-      <div class="available-surveys">
-        <h2> Available Surveys </h2>
-        <a href="/components/surveys/surveys.html" class="see-all"><p>
-            See All
-          </p></a>
-          
-      </div>
-  
-      <div class="available-buttons">
-        <button>Monthly Survey</button>
-        <button>Biannual Survey</button>
-        <button>Weekly Survey</button>
-        <button>Biannual Survey</button>
-  
-      </div>
-    </div>
-
-    <div class="homecards-container mt-4">
-      <div class="col-md-3 mb-3">
-        <a href="/components/surveys/surveys.html" class="card-link">
-          <div class="card">
-            <img src="/images/surveyimage.jpg" class="card-img-top" alt="Image 1">
-            <div class="card-body">
-              <h2 class="card-title">Surveys</h2>
-              <p class="card-text"> Participate in our latest survey to share
-                 your insights on the ongoing challenges
-                 faced by healthcare workers amid staff shortages </p>
+    <div class="container">
+      <div class="welcome-card">
+        <div class="card">
+          <div class="welcome-message">
+            <div>
+              <h2>
+                <span>Welkom </span><span style="color: black">Terug</span>
+              </h2>
+            </div>
+            <div>
+              <h1 style="color: white">User</h1>
             </div>
           </div>
-        </a>
-      </div>
-      <div class="col-md-3 mb-3">
-        <a href="/components/results/results.html" class="card-link">
-          <div class="card">
-            <img src="/images/resultsimage.jpg" class="card-img-top" alt="Image 2">
-            <div class="card-body">
-              <h2 class="card-title">Results</h2>
-              <p class="card-text"> Explore detailed insights and trends from 
-                recent surveys. Understand the most pressing challenges and 
-                track improvements. </p>
-            </div>
+          <div class="welcome-image">
+            <img src="/images/pexels-karolina-grabowska-5206931.jpg" alt="" />
           </div>
-        </a>
+        </div>
       </div>
-      <div class="col-md-3 mb-3">
-        <a href="/components/news/news.html" class="card-link">
-          <div class="card">
-            <img src="/images/newsimage.jpg" class="card-img-top" alt="Image 3">
-            <div class="card-body">
-              <h2 class="card-title">How are you helping</h2>
-              <p class="card-text"> See how your participation in surveys is helping you
-                 and other healthcare workers all around the country. </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-3 mb-3">
-        <a href="/components/support/support.html" class="card-link">
-          <div class="card">
-            <img src="/images/supportimage.jpg" class="card-img-top" alt="Image 4">
-            <div class="card-body">
-              <h2 class="card-title">Support</h2>
-              <p class="card-text"> Access tools, tips, and any other questions you might have
-                 about our platform. Help us improve your experience. </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      
-    </div>
-    </div>
-  </div>
 
-  <!-- Include the mobile top menu -->
+      <div class="home-container">
+        <div class="container-available">
+          <div class="available-surveys">
+            <h3>Beschikbare Onderzoeken</h3>
+            <a href="/components/surveys/surveys.html" class="see-all"
+              ><p>Alles zien</p></a
+            >
+          </div>
+
+          <div class="available-buttons">
+            <button>Monthly Survey</button>
+            <button>Biannual Survey</button>
+            <button>Weekly Survey</button>
+            <button>Biannual Survey</button>
+          </div>
+        </div>
+
+        <div class="homecards-container mt-4">
+          <div class="col-md-3 mb-3">
+            <a href="/components/surveys/surveys.html" class="card-link">
+              <div class="card">
+                <img
+                  src="/images/surveyimage.jpg"
+                  class="card-img-top"
+                  alt="Image 1"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Onderzoeken</h2>
+                  <p class="card-text">
+                    Neem deel aan onze nieuwste enquête om te delen uw inzichten
+                    over de voortdurende uitdagingen waar gezondheidswerkers mee
+                    te maken krijgen door een tekort aan personeel
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 mb-3">
+            <a href="/components/results/results.html" class="card-link">
+              <div class="card">
+                <img
+                  src="/images/resultsimage.jpg"
+                  class="card-img-top"
+                  alt="Image 2"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Resultaten</h2>
+                  <p class="card-text">
+                    Ontdek gedetailleerde inzichten en trends van recente
+                    onderzoeken. Begrijp de meest urgente uitdagingen en
+                    verbeteringen bijhouden.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 mb-3">
+            <a href="/components/news/news.html" class="card-link">
+              <div class="card">
+                <img
+                  src="/images/newsimage.jpg"
+                  class="card-img-top"
+                  alt="Image 3"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Hoe help jij?</h2>
+                  <p class="card-text">
+                    Ontdek hoe uw deelname aan enquêtes u helpt en andere
+                    gezondheidswerkers in het hele land.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 mb-3">
+            <a href="/components/support/support.html" class="card-link">
+              <div class="card">
+                <img
+                  src="/images/supportimage.jpg"
+                  class="card-img-top"
+                  alt="Image 4"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">Support</h2>
+                  <p class="card-text">
+                    Krijg toegang tot hulpmiddelen, tips en andere vragen die u
+                    heeft over ons platform. Help ons uw ervaring te
+                    verbeterene.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include the mobile top menu -->
     <script>
       document.getElementById("mobileMenuContainer").innerHTML = `
         <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70"></iframe>
@@ -119,26 +145,29 @@
 
       // Function to update the top navbar title
       function updateTopNavbarTitle(title) {
-        const topNavbarFrame = document.getElementById('topNavbarFrame');
+        const topNavbarFrame = document.getElementById("topNavbarFrame");
         if (topNavbarFrame && topNavbarFrame.contentWindow) {
-          topNavbarFrame.contentWindow.postMessage({ type: 'updateTitle', title }, '*');
+          topNavbarFrame.contentWindow.postMessage(
+            { type: "updateTitle", title },
+            "*"
+          );
         }
       }
 
       // Example: Update the top navbar title when a page is loaded
-      window.addEventListener('load', function () {
+      window.addEventListener("load", function () {
         const pageTitle = document.title;
         updateTopNavbarTitle(pageTitle);
       });
     </script>
 
-  <!-- Include the mobile bottom menu -->
+    <!-- Include the mobile bottom menu -->
     <div id="mobileBottomMenuContainer"></div>
     <script>
       document.getElementById("mobileBottomMenuContainer").innerHTML = `
     <iframe src="/components/bottom-menu/bottom-menu.html" frameborder="0" width="100%" height="70" position="fixed" bottom="0"></iframe>
   `;
     </script>
-  <script src="js/scripts.js" type="text/javascript"></script>
-</body>
+    <script src="js/scripts.js" type="text/javascript"></script>
+  </body>
 </html>

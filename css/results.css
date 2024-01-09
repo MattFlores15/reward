@@ -1,0 +1,22 @@
+.results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 !important;
+    width: fit-content;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.results-card {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    /* padding: 0 !important; */
+}
+
+.results-card .card-title {
+    text-align: center !important;
+    margin: 0 !important;
+}

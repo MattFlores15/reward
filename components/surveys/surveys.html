@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Surveys</title>
+    <title>Enquêtes</title>
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
     <link rel="stylesheet" href="/css/surveys.css" type="text/css" />
 
@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/dd1d486564.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/scripts.js" type="text/javascript"></script>
 
     <link rel="manifest" href="manifest.json" />
   </head>
@@ -23,7 +24,7 @@
         <div class="col-md-3 mb-3">
           <div class="card-link">
             <div class="card">
-              <h2 class="chart-title">Surveys Progress</h2>
+              <h2 class="chart-title">Enquêtes Vooruitgang</h2>
               <img
                 src="/images/mobile-progress-chart.png"
                 class="card-img-top"
@@ -38,10 +39,15 @@
         <div class="container-filter">
           <div class="filter-buttons">
             <button id="to-filter">
-              <i class="fa-solid fa-filter"></i>Filter
+              <i class="fa-solid fa-filter"></i>Filters
             </button>
-            <button id="to-do">To Do</button>
-            <button id="completed">Completed</button>
+            <button id="all">Alle</button>
+            <button id="to-do">
+              <i class="fa-solid fa-circle"></i>Te Doen
+            </button>
+            <button id="completed">
+              <i class="fa-solid fa-circle"></i>Voltooid
+            </button>
           </div>
         </div>
 
@@ -51,7 +57,7 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Completed Survey 10</h5>
-                  <p class="card-text">Description 1</p>
+                  <p class="card-text">Beschrijving 1</p>
 
                   <div class="progress-status">
                     <div class="meter">
@@ -61,7 +67,7 @@
                   </div>
                   <div class="progress-tags">
                     <p class="card-text">Type: Weekly</p>
-                    <p class="card-text">Status: Completed</p>
+                    <p class="card-text">Status: Voltooid</p>
                   </div>
                 </div>
               </div>
@@ -72,7 +78,7 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Survey 11</h5>
-                  <p class="card-text">Description 11</p>
+                  <p class="card-text">Beschrijving 11</p>
                   <div class="progress-status">
                     <div class="meter">
                       <span id="percentage-18" style="width: 18%"></span>
@@ -81,7 +87,7 @@
                   </div>
                   <div class="progress-tags">
                     <p class="card-text">Type: Weekly</p>
-                    <p class="card-text">Status: To Do</p>
+                    <p class="card-text">Status: Te Doen</p>
                   </div>
                 </div>
               </div>
@@ -92,7 +98,7 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Survey 12</h5>
-                  <p class="card-text">Description 12</p>
+                  <p class="card-text">Beschrijving 12</p>
                   <div class="progress-status">
                     <div class="meter">
                       <span id="percentage-55" style="width: 55%"></span>
@@ -101,7 +107,7 @@
                   </div>
                   <div class="progress-tags">
                     <p class="card-text">Type: Weekly</p>
-                    <p class="card-text">Status: To Do</p>
+                    <p class="card-text">Status: Te Doen</p>
                   </div>
                 </div>
               </div>
@@ -141,6 +147,5 @@
     <iframe src="/components/bottom-menu/bottom-menu.html" frameborder="0" width="100%" height="70"></iframe>
   `;
     </script>
-    <script src="js/scripts.js" type="text/javascript"></script>
   </body>
 </html>

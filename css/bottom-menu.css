@@ -70,7 +70,5 @@
 }
 
 .custom-btn:active {
-    background-color: #9A9AFF;
-    padding: 20px;
-
+    color: #9A9AFF;
 }

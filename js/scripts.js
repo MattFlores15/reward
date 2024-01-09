@@ -12,6 +12,8 @@ if("serviceWorker" in navigator){
     console.log("Browser: I don't support Service Workers :(");
   }
 
+
+
 /////////////////SURVEYS PAGE///////////////////
 document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-buttons button, #all");
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Filter cards based on button clicked
         const status = button.textContent.trim();
 
-        if (status === "All") {
+        if (status === "Alle") {
           surveyCards.forEach(function (card) {
             card.style.display = "flex";
           });
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       surveyCards.forEach(function (card) {
         const cardStatus = card.querySelector(".progress-tags p:last-child").textContent.trim();
 
-        if ((status === "To Do" && cardStatus === "Status: To Do") || (status === "Completed" && cardStatus === "Status: Completed")) {
+        if ((status === "Te Doen" && cardStatus === "Status: Te Doen") || (status === "Voltooid" && cardStatus === "Status: Voltooid")) {
           card.style.display = "flex";
         } else {
           card.style.display = "none";

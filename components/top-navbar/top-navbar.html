@@ -16,9 +16,17 @@
     <div class="mobile-navbar">
       <div class="container-fluid">
         <div class="navbar-brand"><h2 id="page-title"></h2></div>
-        <button class="profile-button">
-          <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
-        </button>
+        <div class="profile-dropdown">
+          <button class="profile-button">
+            <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="#">Support</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
       </div>
 
       <script>
@@ -32,6 +40,13 @@
             }
           }
         });
+
+        document
+          .querySelector(".profile-button")
+          .addEventListener("click", function () {
+            // Notify the parent document to handle dropdown logic
+            window.parent.postMessage({ type: "toggleDropdown" }, "*");
+          });
       </script>
     </div>
   </body>

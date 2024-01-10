@@ -66,7 +66,7 @@
     height: fit-content;
     background-color: #9A9AFF;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 100000;
+    z-index: 999;
     flex-direction: column;
     overflow-y: auto;
     /* Allow vertical scrolling within the dropdown */

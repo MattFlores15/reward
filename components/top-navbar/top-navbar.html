@@ -1,73 +1,64 @@
 <!-- top-navbar.html -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mobile Top Menu</title>
-  <link rel="stylesheet" href="/css/top-navbar.css" type="text/css" />
-  <script src="https://kit.fontawesome.com/dd1d486564.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <!-- top-navbar.html -->
-  <div class="mobile-navbar">
-    <div class="container-fluid">
-      <div class="navbar-brand">
-        <h2 id="page-title"></h2>
-      </div>
-      <div class="profile-dropdown">
-        <button class="profile-button">
-          <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">Profile</a>
-          <a href="#">Support</a>
-          <a href="#">Settings</a>
-          <a href="#">Logout</a>
-          <a href="#">Another Item</a> <!-- Additional list item -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobile Top Menu</title>
+    <link rel="stylesheet" href="/css/top-navbar.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/dd1d486564.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="mobile-navbar">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          <h2 id="page-title"></h2>
+        </div>
+        <div class="profile-dropdown">
+          <button class="profile-button">
+            <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
+          </button>
+          <!-- Remove the dropdown content from here -->
         </div>
       </div>
-    </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Listen for messages from the parent document
-        window.addEventListener("message", function (event) {
-          if (event.data) {
-            if (event.data.type == "toggleDropdown") {
-              const dropDownElement = document.querySelector('.dropdown-content')
-              console.log('toggleDropdown', dropDownElement)
-              if (dropDownElement.classList.contains('dropdown-content-visible')) {
-                dropDownElement.classList.remove('dropdown-content-visible')
-              } else {
-                dropDownElement.classList.add('dropdown-content-visible')
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Listen for messages from the parent document
+          window.addEventListener("message", function (event) {
+            if (event.data) {
+              if (event.data.type == "toggleDropdown") {
+                const dropDownElement =
+                  document.querySelector(".dropdown-content");
+                if (
+                  dropDownElement.classList.contains("dropdown-content-visible")
+                ) {
+                  dropDownElement.classList.remove("dropdown-content-visible");
+                } else {
+                  dropDownElement.classList.add("dropdown-content-visible");
+                }
+              } else if (event.data.type == "updateTitle") {
+                const pageTitleElement = document.getElementById("page-title");
+                if (pageTitleElement) {
+                  pageTitleElement.innerText = event.data.title;
+                }
               }
             }
-
-            else if (event.data.type == "updateTitle") {
-              const pageTitleElement = document.getElementById("page-title");
-              if (pageTitleElement) {
-                pageTitleElement.innerText = event.data.title;
-              };
-            };
-          };
-        });
-
-        // Check if .profile-button exists before adding the event listener
-        const profileButton = document.querySelector(".profile-button");
-        console.log('finding profile button')
-        console.log(profileButton)
-        if (profileButton) {
-          profileButton.addEventListener("click", function () {
-            // Notify the parent document to handle dropdown logic
-            window.postMessage({ type: "toggleDropdown" }, "*");
           });
-        }
-      });
-    </script>
-  </div>
-</body>
 
+          // Check if .profile-button exists before adding the event listener
+          const profileButton = document.querySelector(".profile-button");
+          if (profileButton) {
+            profileButton.addEventListener("click", function () {
+              // Notify the parent document to handle dropdown logic
+              window.parent.postMessage({ type: "toggleDropdown" }, "*");
+            });
+          }
+        });
+      </script>
+    </div>
+  </body>
 </html>

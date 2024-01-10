@@ -55,7 +55,7 @@
             <button>Maandelijks</button>
             <button>Halfjaarlijks</button>
             <button>Wekelijks</button>
-           <!-- <button>Biannual Survey</button> -->
+            <!-- <button>Biannual Survey</button> -->
           </div>
         </div>
 
@@ -140,10 +140,22 @@
     </div>
 
     <!-- Include the mobile top menu -->
+    <div id="dropdownOverlay">
+      <button class="profile-button">
+        <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Profile</a>
+        <a href="#">Support</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+
     <script>
       document.getElementById("mobileMenuContainer").innerHTML = `
-        <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70" position="absolute"></iframe>
-      `;
+      <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70" position="absolute"></iframe>
+    `;
 
       // Function to update the top navbar title
       function updateTopNavbarTitle(title) {
@@ -162,20 +174,21 @@
         updateTopNavbarTitle(pageTitle);
       });
 
-      // // Handle dropdown logic in the parent document
-      // function handleMessage(event) {
-      //   if (event.data && event.data.type === "toggleDropdown") {
-      //     // Toggle your dropdown logic here
-      //     // For example, you can show/hide a dropdown overlay on the entire page
-      //     const dropdownOverlay = document.getElementById("dropdownOverlay");
-      //     if (dropdownOverlay) {
-      //       dropdownOverlay.classList.toggle("show");
-      //     }
-      //   }
-      // }
-
-      // // Listen for messages from the iframe
-      // window.addEventListener("message", handleMessage);
+      // Handle dropdown logic in the parent document
+      window.addEventListener("message", function (event) {
+        if (event.data && event.data.type === "toggleDropdown") {
+          const dropdownOverlay = document.getElementById("dropdownOverlay");
+          if (dropdownOverlay) {
+            dropdownOverlay.classList.toggle("show");
+            // Add class for smooth sliding when closing
+            if (!dropdownOverlay.classList.contains("show")) {
+              dropdownOverlay.classList.add("hide");
+            } else {
+              dropdownOverlay.classList.remove("hide");
+            }
+          }
+        }
+      });
     </script>
 
     <!-- Include the mobile bottom menu -->

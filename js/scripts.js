@@ -12,6 +12,23 @@ if("serviceWorker" in navigator){
     console.log("Browser: I don't support Service Workers :(");
   }
 
+/////////////////NAVIGATION///////////////////
+  // window.addEventListener('message', function (event) {
+  //   if (event.data && event.data.type === 'highlightButton') {
+  //     const activeHref = event.data.href;
+  //     const buttons = document.querySelectorAll('.custom-icon');
+  
+  //     buttons.forEach(button => {
+  //       const href = button.parentElement.getAttribute('href');
+  //       if (href === activeHref) {
+  //         button.classList.add('active');
+  //       } else {
+  //         button.classList.remove('active');
+  //       }
+  //     });
+  //   }
+  // });
+  
 
 
 /////////////////SURVEYS PAGE///////////////////

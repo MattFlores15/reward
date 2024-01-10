@@ -28,37 +28,7 @@
     padding-bottom: 120px !important;
 }
 
-.news-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 10px;
-}
 
-.news-cards .card {
-    border: 2px solid #eee;
-    padding: 0;
-    border-radius: 10px;
-    height: 200px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transition: box-shadow 0.3s;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.news-cards .card img {
-    width: 205px;
-    object-fit: cover;
-    height: 210px;
-    object-position: center;
-}
-
-.card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 .main-card{
     /* padding: 5px; */

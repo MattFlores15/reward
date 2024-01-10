@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       surveyCards.forEach(function (card) {
         const cardStatus = card.querySelector(".progress-tags p:last-child").textContent.trim();
 
-        if ((status === "Te Doen" && cardStatus === "Status: Te Doen") || (status === "Voltooid" && cardStatus === "Status: Voltooid")) {
+        if ((status === "Niet voltooid" && cardStatus === "Status: Niet voltooid") || (status === "Voltooid" && cardStatus === "Status: Voltooid")) {
           card.style.display = "flex";
         } else {
           card.style.display = "none";

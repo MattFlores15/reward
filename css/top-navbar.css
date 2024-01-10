@@ -59,17 +59,21 @@
 /* Dropdown styles */
 .dropdown-content {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 120px;
     height: fit-content;
     background-color: #9A9AFF;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 100000;
     flex-direction: column;
     overflow-y: auto;
     /* Allow vertical scrolling within the dropdown */
+}
+
+.dropdown-content-visible {
+    display: inline-block !important;
 }
 
 .dropdown-content a {
@@ -109,3 +113,4 @@
         margin: 10px 0;
     }
 }
+

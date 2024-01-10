@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Filter cards based on button clicked
         const status = button.textContent.trim();
 
-        if (status === "Alle") {
+        if (status === "Alles") {
           surveyCards.forEach(function (card) {
             card.style.display = "flex";
           });

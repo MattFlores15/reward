@@ -4,8 +4,8 @@
     "display": "fullscreen",
     "scope": ".",
     "start_url" : "./",
-    "name": "test",
-    "short_name": "test",
+    "name": "Samen aan Z",
+    "short_name": "Samen aan Z",
     "icons": [
         {
             "src": "/icon-192x192.png",

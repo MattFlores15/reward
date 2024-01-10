@@ -20,3 +20,94 @@
     text-align: center !important;
     margin: 0 !important;
 }
+/* news.css */
+
+.news-container {
+    padding-top: 20px;
+    width: 100vw;
+    padding-bottom: 120px !important;
+}
+
+.news-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.news-cards .card {
+    border: 2px solid #eee;
+    padding: 0;
+    border-radius: 10px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: box-shadow 0.3s;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-cards .card img {
+    width: 205px;
+    object-fit: cover;
+    height: 210px;
+    object-position: center;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-card{
+    /* padding: 5px; */
+}
+
+.card.horizontal-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+    padding-bottom: 5px;
+    background-image: url(/images/pexels-cottonbro-studio-7578802.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: 0;
+    justify-content: flex-end;
+}
+
+.card-img-overlay {
+    align-self: flex-end;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgba(207, 207, 207, 0.2);
+    gap: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.card-img-overlay .card-text {
+    margin: 0;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.card-img-overlay .card-title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow:
+    1px 0 rgb(51, 51, 51),
+    0 -1px rgb(51, 51, 51),
+    -1px 0 rgb(51, 51, 51),
+    0 1px rgb(51, 51, 51);
+}

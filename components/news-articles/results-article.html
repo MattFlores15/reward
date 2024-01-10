@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nieuwsartikel</title>
+    <link rel="stylesheet" href="/css/news.css" type="text/css" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+    <link rel="manifest" href="../../manifest.json" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+  </head>
+
+  <body>
+    <!-- Include the mobile menu -->
+    <div id="mobileMenuContainer"></div>
+
+      <div class="col-md-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title">Helft zorgwerknemers vindt werkdruk te hoog</h1>
+              <h5 class="card-date">17-11-2022 00:00</h5>
+              <p> In het tweede kwartaal van 2022 vond 50 procent van alle werknemers in de zorg en welzijn hun werkdruk (veel) te hoog. Een half jaar eerder was dat nog 44 procent. Met 61 procent was de ervaren werkdruk in het tweede kwartaal van 2022 het hoogst bij werknemers in de kinderopvang. Dat meldt het CBS aan de hand van recent onderzoek naar de werkdruk en arbeidstevredenheid van werknemers in zorg en welzijn.
+
+                Voor het onderzoek zijn gegevens gebruikt uit de werknemersenquête die sinds 2019 jaarlijks in het tweede en vierde kwartaal wordt uitgevoerd voor het onderzoeksprogramma Arbeidsmarkt, Zorg en Welzijn.
+                
+                Ook in de jeugdzorg (55 procent) en de huisartsenzorg en gezondheidscentra (54 procent) was het percentage werknemers dat een te hoge werkdruk ervaart duidelijk hoger dan gemiddeld. In de branches overige zorg en welzijn (37 procent) en sociaal werk (41 procent) was dat juist lager. </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    </div>
+    
+
+    <!-- Include the mobile top menu -->
+    <script>
+      document.getElementById("mobileMenuContainer").innerHTML = `
+        <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70"></iframe>
+      `;
+
+      // Function to update the top navbar title
+      function updateTopNavbarTitle(title) {
+        const topNavbarFrame = document.getElementById('topNavbarFrame');
+        if (topNavbarFrame && topNavbarFrame.contentWindow) {
+          topNavbarFrame.contentWindow.postMessage({ type: 'updateTitle', title }, '*');
+        }
+      }
+
+      // Example: Update the top navbar title when a page is loaded
+      window.addEventListener('load', function () {
+        const pageTitle = document.title;
+        updateTopNavbarTitle(pageTitle);
+      });
+    </script>
+
+    <!-- Include the mobile bottom menu -->
+    <div id="mobileBottomMenuContainer"></div>
+    <script>
+      document.getElementById("mobileBottomMenuContainer").innerHTML = `
+    <iframe src="/components/bottom-menu/bottom-menu.html" frameborder="0" width="100%" height="70"></iframe>
+  `;
+    </script>
+
+    <script src="js/scripts.js" type="text/javascript"></script>
+  </body>
+</html>

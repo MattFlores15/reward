@@ -75,6 +75,13 @@
         const pageTitle = document.title;
         updateTopNavbarTitle(pageTitle);
       });
+
+  // Update the rewardUnlocked value
+  let currentCount = parseInt(localStorage.getItem('rewardUnlocked'), 10);
+  currentCount += 1;
+  localStorage.setItem('rewardUnlocked', currentCount);
+
+  console.log(currentCount);
     </script>
   </body>
 </html>

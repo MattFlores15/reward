@@ -178,7 +178,7 @@ body p {
 }
 
 .img-resize {
-  width: 80%;
+  width: 60%;
   height: auto;
 }
 
@@ -260,6 +260,9 @@ button:last-child {
   justify-content: space-around;
   padding-bottom: 75px;
   position: relative;
+}
+.flowers:active {
+  color: white;
 }
 
 /* #alert {

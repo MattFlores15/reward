@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loadPage(url);
   }
     // This part will check for the current URL path and highlight the active menu item
-    const currentPath = window.location.pathname;
+    const currentPath = window.parent.location.pathname;
     console.log('Current Path:', currentPath);
   
     const buttons = document.querySelectorAll('.custom-btn');

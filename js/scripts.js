@@ -13,6 +13,46 @@ if("serviceWorker" in navigator){
   }
 
 /////////////////NAVIGATION///////////////////
+// Handle navigation in the parent document
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  document.getElementById("dropdownOverlay").addEventListener("touchstart", function (event) {
+    touchStartX = event.touches[0].clientX;
+  });
+
+  document.getElementById("dropdownOverlay").addEventListener("touchmove", function (event) {
+    touchEndX = event.touches[0].clientX;
+  });
+
+  document.getElementById("dropdownOverlay").addEventListener("touchend", function () {
+    const deltaX = touchEndX - touchStartX;
+    const dropdownOverlay = document.getElementById("dropdownOverlay");
+
+    if (deltaX > 50) {
+      dropdownOverlay.classList.remove("show");
+      dropdownOverlay.classList.add("hide");
+    } else if (deltaX < -50) {
+      dropdownOverlay.classList.remove("hide");
+      dropdownOverlay.classList.add("show");
+    }
+  });
+
+  // Handle dropdown logic in the parent document
+  window.addEventListener("message", function (event) {
+    if (event.data && event.data.type === "toggleDropdown") {
+      const dropdownOverlay = document.getElementById("dropdownOverlay");
+      if (dropdownOverlay) {
+        dropdownOverlay.classList.toggle("show");
+        if (!dropdownOverlay.classList.contains("show")) {
+          dropdownOverlay.classList.add("hide");
+        } else {
+          dropdownOverlay.classList.remove("hide");
+        }
+      }
+    }
+  });
+
 
 
 

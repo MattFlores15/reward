@@ -40,12 +40,11 @@ body p {
    position: fixed;
    flex-direction: column;
    justify-content: flex-start;
-   align-items: flex-start;
    gap: 10px;
    top: 60px;
    right: 0;
    width: 150px;
-   height: 100%;
+   height: 35%;
    padding: 10px;
     border-radius: 5px;
    background-color: #9A9AFF;

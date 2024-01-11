@@ -24,14 +24,43 @@
     background: linear-gradient(to bottom, #72D9FF, #C8F0FF);
 }
 
-.flower-count{
+.welcome-greeting{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     gap: 10px;
     padding: 10px;
     width: 100%;
+}
+
+.flower-count{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.flower-count p{
+    margin: 0;
+    color: #fff;
+    font-size: 20px !important;
+    width: fit-content;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#rewardUnlocked{
+    position: absolute;
+    bottom: 61px;
+    right: 69px;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .flower-count-overlay {
@@ -45,7 +74,7 @@
 }
 
 .flower-count-image{
-    width: 120px;
+    width: 150px;
     height: auto;
     border-radius: 10px;
 }

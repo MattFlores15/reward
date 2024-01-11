@@ -14,44 +14,17 @@ if("serviceWorker" in navigator){
 
 /////////////////NAVIGATION///////////////////
 // Handle navigation in the parent document
-  let touchStartX = 0;
-  let touchEndX = 0;
 
-  document.getElementById("dropdownOverlay").addEventListener("touchstart", function (event) {
-    touchStartX = event.touches[0].clientX;
-  });
+  const profileButton = document.querySelector(".profile-button");
+  const dropdownContent = document.querySelector(".dropdown-content");
 
-  document.getElementById("dropdownOverlay").addEventListener("touchmove", function (event) {
-    touchEndX = event.touches[0].clientX;
-  });
-
-  document.getElementById("dropdownOverlay").addEventListener("touchend", function () {
-    const deltaX = touchEndX - touchStartX;
-    const dropdownOverlay = document.getElementById("dropdownOverlay");
-
-    if (deltaX > 50) {
-      dropdownOverlay.classList.remove("show");
-      dropdownOverlay.classList.add("hide");
-    } else if (deltaX < -50) {
-      dropdownOverlay.classList.remove("hide");
-      dropdownOverlay.classList.add("show");
-    }
-  });
-
-  // Handle dropdown logic in the parent document
-  window.addEventListener("message", function (event) {
-    if (event.data && event.data.type === "toggleDropdown") {
-      const dropdownOverlay = document.getElementById("dropdownOverlay");
-      if (dropdownOverlay) {
-        dropdownOverlay.classList.toggle("show");
-        if (!dropdownOverlay.classList.contains("show")) {
-          dropdownOverlay.classList.add("hide");
-        } else {
-          dropdownOverlay.classList.remove("hide");
-        }
+  if (profileButton) {
+    profileButton.addEventListener("click", function () {
+      if (dropdownContent) {
+        dropdownContent.classList.toggle("show");
       }
-    }
-  });
+    });
+  }
 
 
 
@@ -67,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         filterButtons.forEach(function (btn) {
           btn.classList.remove("active-button");
         });
-
+        
         // Add active class to the clicked button
         button.classList.add("active-button");
 
@@ -96,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+
 
 // Global script for the rewards system
   // This script makes it possible to verify (by creating a value) how many rewards a user has unlocked. The first time the app starts, the value of rewardUnlocked

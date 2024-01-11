@@ -30,19 +30,18 @@
             <div class="welcome-message">
               <div class="welcome-greeting">
                 <h2 style="color: #9a9aff">Welkom Terug</h2>
+                <div class="welcome-user">
+                  <h2 style="color: #ffffff">User</h2>
+                </div>
               </div>
-              <div class="welcome-user">
-                <h2 style="color: #ffffff">User</h2>
-              </div>
+
               <div class="flower-count">
-                <p>
-                  Je hebt <span id="rewardUnlocked"></span> bloemenbadges
-                  verdiend!
-                </p>
+                <p>Je hebt bloemenbadges verdiend!</p>
+                <span id="rewardUnlocked"></span>
+                <div class="welcome-image">
+                  <img src="/images/sunflower.png" alt="" />
+                </div>
               </div>
-            </div>
-            <div class="welcome-image">
-              <img src="/images/sunflower.png" alt="" />
             </div>
           </div>
         </div>
@@ -222,11 +221,6 @@
     </script>
 
     <script>
-      // Function to generate a random number between 0 and 100 for flower count
-      function generateRandomFlowerCount() {
-        return Math.floor(Math.random() * 101);
-      }
-
       // Function to update the flower count display
       function updateFlowerCount() {
         let flowerCount = generateRandomFlowerCount();
@@ -252,14 +246,15 @@
 
       // Fetch the rewardUnlocked value
       // This code fetches the rewardUnlocked value to verify the amount of surveys that have been filled in by the user.
-      let currentCount = parseInt(localStorage.getItem('rewardUnlocked'), 10);
+      let currentCount = parseInt(localStorage.getItem("rewardUnlocked"), 10);
       // Fix for the NaN result bug
-      currentCount = isNaN(parseInt(currentCount, 10)) ? 0 : parseInt(currentCount, 10);
-      localStorage.setItem('rewardUnlocked', currentCount);
+      currentCount = isNaN(parseInt(currentCount, 10))
+        ? 0
+        : parseInt(currentCount, 10);
+      localStorage.setItem("rewardUnlocked", currentCount);
       // This makes the amount into a text format so that I can add it to the page
-      document.getElementById('rewardUnlocked').textContent = currentCount;
+      document.getElementById("rewardUnlocked").textContent = currentCount;
       console.log(currentCount);
-
     </script>
   </body>
 </html>

@@ -92,7 +92,7 @@
 
 #dropdownOverlay {
     display: none;
-    position: relative;
+    position: absolute;
     flex-direction: column;
     justify-content: flex-start;
     top: 0;

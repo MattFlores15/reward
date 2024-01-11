@@ -37,7 +37,7 @@ body p {
 
  #dropdownOverlay {
    display: none;
-   position: fixed;
+   position: absolute;
    flex-direction: column;
    justify-content: flex-start;
    gap: 10px;

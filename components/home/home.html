@@ -28,13 +28,13 @@
         <div class="welcome-card">
           <div class="card">
             <div class="welcome-message">
-              <div>
-                <h2>
-                  <span>Welkom </span><span style="color: black">Terug</span>
-                </h2>
+              <div class="welcome-greeting">
+                <h2 style="color: #9a9aff">Welkom Terug</h2>
               </div>
-              <div>
-                <h1 style="color: white">User</h1>
+              <div class="welcome-user">
+                <h2 style="color: #ffffff">User</h2>
+              </div>
+              <div class="flower-count">
                 <p>
                   Je hebt <span id="flowerCount">0</span> bloemenbadges
                   verdiend!
@@ -222,12 +222,29 @@
     </script>
 
     <script>
-      let flowerCount = 0;
+      // Function to generate a random number between 0 and 100 for flower count
+      function generateRandomFlowerCount() {
+        return Math.floor(Math.random() * 101);
+      }
 
-      function completeSurvey() {
-        // Assume the survey is completed successfully, and increment the flower count
-        flowerCount += 1;
+      // Function to update the flower count display
+      function updateFlowerCount() {
+        let flowerCount = generateRandomFlowerCount();
         document.getElementById("flowerCount").innerText = flowerCount;
+
+        // Show flower count on the pot image
+        document.getElementById("flowerCountOverlay").innerText = flowerCount;
+      }
+
+      // Call the function to update the flower count on page load
+      window.addEventListener("load", function () {
+        updateFlowerCount();
+      });
+
+      // Example: Call the function when completing a survey
+      function completeSurvey() {
+        // Assume the survey is completed successfully, and update the flower count
+        updateFlowerCount();
 
         // Show a congratulatory message or any other visual feedback
         alert("Gefeliciteerd! Je hebt een bloemenbadge verdiend!");

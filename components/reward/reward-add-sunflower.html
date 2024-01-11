@@ -79,6 +79,8 @@
 // Update the rewardUnlocked value
       // This code updates the value of rewardsUnlocked now that a new survey has been filled in.
   let currentCount = parseInt(localStorage.getItem('rewardUnlocked'), 10);
+  // Fix for the NaN result bug
+  currentCount = isNaN(parseInt(currentCount, 10)) ? 0 : parseInt(currentCount, 10);
   currentCount += 1;
   localStorage.setItem('rewardUnlocked', currentCount);
 

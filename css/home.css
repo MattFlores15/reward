@@ -1,11 +1,19 @@
-
+.home-welcome-flowers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 20px;
+    gap: 20px;
+}
 
 .welcome-card{
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 10px;
-    padding: 0 10px;
+    padding: 0;
 }
 
 .welcome-card .card{  
@@ -28,6 +36,59 @@
     border-radius: 10px;
 }
 
+/* Add styles for the flower badge count in the welcome card */
+.flower-badge-count {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Add styles for the earn flowers section */
+.earn-flowers-section {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    color: black;
+}
+
+.flowers-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+    background-color: #288a49;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.earn-flowers-section h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.earn-flowers-section p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.earn-flowers-section button {
+    padding: 10px;
+    background-color: #fff;
+    color: #288a49;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.earn-flowers-section button:hover {
+    background-color: #288a49;
+    color: #fff;
+}
 .available-surveys {
     padding: 0 10px;
     display: flex;
@@ -49,6 +110,7 @@
 
 .available-surveys h3 {
     margin: 0 !important;
+    font-size: 18px;
 }
 
 .container-available {

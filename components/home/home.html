@@ -36,7 +36,7 @@
               </div>
               <div class="flower-count">
                 <p>
-                  Je hebt <span id="flowerCount">0</span> bloemenbadges
+                  Je hebt <span id="rewardUnlocked"></span> bloemenbadges
                   verdiend!
                 </p>
               </div>
@@ -249,6 +249,17 @@
         // Show a congratulatory message or any other visual feedback
         alert("Gefeliciteerd! Je hebt een bloemenbadge verdiend!");
       }
+
+      // Fetch the rewardUnlocked value
+      // This code fetches the rewardUnlocked value to verify the amount of surveys that have been filled in by the user.
+      let currentCount = parseInt(localStorage.getItem('rewardUnlocked'), 10);
+      // Fix for the NaN result bug
+      currentCount = isNaN(parseInt(currentCount, 10)) ? 0 : parseInt(currentCount, 10);
+      localStorage.setItem('rewardUnlocked', currentCount);
+      // This makes the amount into a text format so that I can add it to the page
+      document.getElementById('rewardUnlocked').textContent = currentCount;
+      console.log(currentCount);
+
     </script>
   </body>
 </html>

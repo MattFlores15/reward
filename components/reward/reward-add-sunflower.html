@@ -83,7 +83,7 @@
   currentCount = isNaN(parseInt(currentCount, 10)) ? 0 : parseInt(currentCount, 10);
   currentCount += 1;
   localStorage.setItem('rewardUnlocked', currentCount);
-
+  document.getElementById('rewardUnlocked').textContent = currentCount;
   console.log(currentCount);
     </script>
   </body>

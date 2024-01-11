@@ -17,70 +17,70 @@ const json = {
         "type": "rating",
         "name": "question1",
         "title": "Ik denk dat ik dit systeem vaak zou willen gebruiken.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        },
        {
         "type": "rating",
         "name": "question2",
         "title": "Ik vind het systeem onnodig ingewikkeld.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        },
        {
         "type": "rating",
         "name": "question3",
         "title": "Ik vind het systeem gemakkelijk te gebruiken.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        },
        {
         "type": "rating",
         "name": "question4",
         "title": "Ik denk dat ik de hulp van een expert nodig heb om dit systeem te kunnen gebruiken.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        },
        {
         "type": "rating",
         "name": "question5",
         "title": "Ik vind de verschillende functies van dit systeem goed geïntegreerd.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        },
        {
         "type": "rating",
         "name": "question6",
         "title": "Ik denk dat er te veel tegenstrijdigheden in dit systeem zitten.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        },
        {
         "type": "rating",
         "name": "question7",
         "title": "Ik kan me voorstellen dat de meeste mensen heel snel leren om dit systeem te gebruiken.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        },
        {
         "type": "rating",
         "name": "question8",
         "title": "Ik vind het systeem heel lastig om te gebruiken.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        },
        {
         "type": "rating",
         "name": "question9",
         "title": "Ik voelde me zelfverzekerd tijdens het gebruik van het systeem.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        },
        {
         "type": "rating",
         "name": "question10",
         "title": "Ik moest veel dingen leren voordat ik met het systeem aan de slag kon gaan.",
-        "description": "Links = Helemaal niet akkoord / Rechts = Helemaal akkoord",
+        "description": "1 = Helemaal niet akkoord / 5 = Helemaal akkoord",
         "isRequired": true
        }
       ]

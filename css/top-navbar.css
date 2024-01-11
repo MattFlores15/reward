@@ -43,9 +43,9 @@
 }
 
 .profile-button {
-    background-color: #9A9AFF;
+    background-color: transparent;
     border: none;
-    color: white;
+    color: #9A9AFF;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -54,7 +54,7 @@
 }
 
 .profile-button i{
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /* Dropdown styles */

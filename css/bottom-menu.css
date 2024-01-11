@@ -6,7 +6,7 @@
     right: 0;
     position: fixed;
     text-decoration: none !important;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.7);
     z-index: 100;
     border-top: #9A9AFF 2px solid;
 }

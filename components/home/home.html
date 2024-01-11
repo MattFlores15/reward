@@ -44,37 +44,37 @@
               </div>
             </div>
           </div>
+          <!-- Add a section for earning flower badges -->
+          <div class="earn-flowers-section">
+            <div class="flowers-text">
+              <!-- <h3>Verdien Bloemen</h3> -->
+              <p>
+                Neem deel aan onze enquêtes en verdien bloemen om je werkplek te
+                verbeteren!
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Add a section for earning flower badges -->
-        <div class="earn-flowers-section">
-          <div class="flowers-text">
-            <h3>Verdien Bloemen</h3>
-            <p>
-              Neem deel aan onze enquêtes en verdien bloemen om je werkplek te
-              verbeteren!
-            </p>
+        <div class="container-available">
+          <div class="available-surveys">
+            <h3>Beschikbare Onderzoeken</h3>
+            <a href="/components/surveys/surveys.html" class="see-all"
+              ><p>Alles zien</p></a
+            >
           </div>
-          <div class="container-available">
-            <div class="available-surveys">
-              <h3>Beschikbare Onderzoeken</h3>
-              <a href="/components/surveys/surveys.html" class="see-all"
-                ><p>Alles zien</p></a
-              >
-            </div>
 
-            <div class="available-buttons">
-              <a href="/components/surveys/survey-view-1.html">
-                <button onclick="completeSurvey()">Maandelijks</button></a
-              >
-              <a href="/components/surveys/survey-view-2.html">
-                <button onclick="completeSurvey()">Halfjaarlijks</button></a
-              >
-              <a href="/components/surveys/survey-view-1.html">
-                <button onclick="completeSurvey()">Wekelijks</button></a
-              >
-              <!-- <button>Biannual Survey</button> -->
-            </div>
+          <div class="available-buttons">
+            <a href="/components/surveys/survey-view-1.html">
+              <button onclick="completeSurvey()">Maandelijks</button></a
+            >
+            <a href="/components/surveys/survey-view-2.html">
+              <button onclick="completeSurvey()">Halfjaarlijks</button></a
+            >
+            <a href="/components/surveys/survey-view-1.html">
+              <button onclick="completeSurvey()">Wekelijks</button></a
+            >
+            <!-- <button>Biannual Survey</button> -->
           </div>
         </div>
       </div>
@@ -162,23 +162,28 @@
 
     <!-- Include the mobile top menu -->
     <div id="dropdownOverlay">
-      <button class="profile-button">
-        <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
-      </button>
+      <div class="dropdown-image">
+        <img
+          src="/images/pexels-karolina-grabowska-5206931.jpg"
+          alt="Profile Image"
+        />
+      </div>
       <div class="dropdown-content">
-        <button class="close-button" onclick="closeDropdown()">&#10006;</button>
         <a href="#">Profile</a>
         <a href="#">Support</a>
         <a href="#">Settings</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
         <a href="#">Logout</a>
       </div>
+      <button class="close-button" onclick="closeDropdown()">&#10006;</button>
     </div>
 
     <script>
       document.getElementById("mobileMenuContainer").innerHTML = `
         <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70" position="absolute"></iframe>
       `;
-    
+
       // Function to update the top navbar title
       function updateTopNavbarTitle(title) {
         const topNavbarFrame = document.getElementById("topNavbarFrame");
@@ -189,7 +194,7 @@
           );
         }
       }
-    
+
       // Function to close the dropdown
       function closeDropdown() {
         const dropdownOverlay = document.getElementById("dropdownOverlay");
@@ -198,13 +203,13 @@
           dropdownOverlay.classList.add("hide");
         }
       }
-    
+
       // Example: Update the top navbar title when a page is loaded
       window.addEventListener("load", function () {
         const pageTitle = document.title;
         updateTopNavbarTitle(pageTitle);
       });
-    
+
       // Handle dropdown logic in the parent document
       window.addEventListener("message", function (event) {
         if (event.data && event.data.type === "toggleDropdown") {
@@ -222,7 +227,6 @@
       });
     </script>
 
-    
     <!-- Include the mobile bottom menu -->
     <div id="mobileBottomMenuContainer"></div>
     <script>
@@ -233,13 +237,13 @@
 
     <script>
       // Function to update the flower count display
-      function updateFlowerCount() {
-        let flowerCount = generateRandomFlowerCount();
-        document.getElementById("flowerCount").innerText = flowerCount;
+      // function updateFlowerCount() {
+      //   let flowerCount = generateRandomFlowerCount();
+      //   document.getElementById("flowerCount").innerText = flowerCount;
 
-        // Show flower count on the pot image
-        document.getElementById("flowerCountOverlay").innerText = flowerCount;
-      }
+      //   // Show flower count on the pot image
+      //   document.getElementById("flowerCountOverlay").innerText = flowerCount;
+      // }
 
       // Call the function to update the flower count on page load
       window.addEventListener("load", function () {

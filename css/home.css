@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 10px;
+    /* gap: 10px; */
     padding: 0;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .earn-flowers-section {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     border-radius: 10px;
     width: 100%;
     color: black;
@@ -113,14 +113,15 @@
 .flowers-text{
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     gap: 5px;
-    background-color: #288a49;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    /* background-color: transparent; */
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+    color: #aeaeae;
+    /* padding: 20px; */
+    border-radius: 10px;
     font-size: 16px;
 }
 
@@ -130,6 +131,8 @@
 }
 
 .earn-flowers-section p {
+    align-self: center;
+    text-align: center;
     font-size: 16px;
     margin-bottom: 15px;
 }
@@ -148,6 +151,16 @@
     background-color: #288a49;
     color: #fff;
 }
+
+.container-available {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-top: 20px;
+}
+
 .available-surveys {
     display: flex;
     align-items: start;
@@ -168,17 +181,11 @@
 
 .available-surveys h3 {
     margin: 0 !important;
-    width: min-content;
+    width: fit-content;
     font-size: 18px;
 }
 
-.container-available {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    margin-top: 20px;
-}
+
 
 .available-buttons {
     display: flex;
@@ -209,7 +216,6 @@
     flex-direction: column;
     margin-top: 20px;
     gap: 20px;
-    padding: 0 10px;
 }
 
 .homecards-container {

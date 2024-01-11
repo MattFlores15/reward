@@ -60,6 +60,16 @@
         updateTopNavbarTitle(pageTitle);
       });
     </script>
+
+        <!-- Include the mobile bottom menu -->
+        <div id="mobileBottomMenuContainer"></div>
+        <script>
+          document.getElementById("mobileBottomMenuContainer").innerHTML = `
+        <iframe src="/components/bottom-menu/bottom-menu.html" frameborder="0" width="100%" height="70" position="fixed" bottom="0"></iframe>
+      `;
+        </script>
+
+        
 </body>
 </html>
 

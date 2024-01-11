@@ -146,9 +146,9 @@
 
     <script>
       document.getElementById("mobileMenuContainer").innerHTML = `
-      <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70" position="absolute"></iframe>
-    `;
-
+        <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70" position="absolute"></iframe>
+      `;
+    
       // Function to update the top navbar title
       function updateTopNavbarTitle(title) {
         const topNavbarFrame = document.getElementById("topNavbarFrame");
@@ -159,13 +159,22 @@
           );
         }
       }
-
+    
+      // Function to close the dropdown
+      function closeDropdown() {
+        const dropdownOverlay = document.getElementById("dropdownOverlay");
+        if (dropdownOverlay) {
+          dropdownOverlay.classList.remove("show");
+          dropdownOverlay.classList.add("hide");
+        }
+      }
+    
       // Example: Update the top navbar title when a page is loaded
       window.addEventListener("load", function () {
         const pageTitle = document.title;
         updateTopNavbarTitle(pageTitle);
       });
-
+    
       // Handle dropdown logic in the parent document
       window.addEventListener("message", function (event) {
         if (event.data && event.data.type === "toggleDropdown") {
@@ -181,17 +190,16 @@
           }
         }
       });
-
+    
       // Fetch the rewardUnlocked value
       // This code fetches the rewardUnlocked value to verify the amount of surveys that have been filled in by the user.
-  let currentCount = parseInt(localStorage.getItem('rewardUnlocked'), 10);
-  // Fix for the NaN result bug
-  currentCount = isNaN(parseInt(currentCount, 10)) ? 0 : parseInt(currentCount, 10);
-  localStorage.setItem('rewardUnlocked', currentCount);
-  // This makes the amount into a text format so that I can add it to the page
-  document.getElementById('rewardUnlocked').textContent = currentCount;
-  console.log(currentCount);
-    </script>
+      let currentCount = parseInt(localStorage.getItem('rewardUnlocked'), 10);
+      // Fix for the NaN result bug
+      currentCount = isNaN(parseInt(currentCount, 10)) ? 0 : parseInt(currentCount, 10);
+      localStorage.setItem('rewardUnlocked', currentCount);
+      // This makes the amount into a text format so that I can add it to the page
+      document.getElementById('rewardUnlocked').textContent = currentCount;
+      console.log(currentCount);
     </script>
 
     <!-- Include the mobile bottom menu -->

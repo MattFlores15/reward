@@ -106,5 +106,5 @@ document.addEventListener("DOMContentLoaded", function () {
       if (localStorage.getItem('rewardUnlocked') === null) {
         // If this is not the case, the value for the unlocked rewards will be added to local storage with a standard value of 0
         localStorage.setItem('rewardUnlocked', 0);
-        console.log(rewardUnlocked);
+        console.log('currentCount');
   }

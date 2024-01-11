@@ -25,13 +25,7 @@
           <div class="card-link">
             <div class="card">
               <h2 class="chart-title">Totale voortgang</h2>
-              <img
-                src="/images/mobile-progress-chart.png"
-                class="card-img-top"
-                alt="Image 1"
-                height="100px"
-                width="100px"
-              />
+              <p>Aantal voltooide vragenlijsten: <span id="rewardUnlocked"></span></p>
             </div>
           </div>
         </div>
@@ -246,6 +240,17 @@
           }
         }
       });
+
+      // Fetch the rewardUnlocked value
+      // This code fetches the rewardUnlocked value to verify the amount of surveys that have been filled in by the user.
+  let currentCount = parseInt(localStorage.getItem('rewardUnlocked'), 10);
+  // Fix for the NaN result bug
+  currentCount = isNaN(parseInt(currentCount, 10)) ? 0 : parseInt(currentCount, 10);
+  localStorage.setItem('rewardUnlocked', currentCount);
+  // This makes the amount into a text format so that I can add it to the page
+  document.getElementById('rewardUnlocked').textContent = currentCount;
+  console.log(currentCount);
+    </script>
     </script>
 
     <!-- Include the mobile bottom menu -->

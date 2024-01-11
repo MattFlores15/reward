@@ -82,56 +82,68 @@
     
 
     <!-- Include the mobile top menu -->
-  <div id="dropdownOverlay">
-    <button class="profile-button">
-      <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Profile</a>
-      <a href="#">Support</a>
-      <a href="#">Settings</a>
-      <a href="#">Logout</a>
+    <div id="dropdownOverlay">
+      <button class="profile-button">
+        <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
+      </button>
+      <div class="dropdown-content">
+        <button class="close-button" onclick="closeDropdown()">&#10006;</button>
+        <a href="#">Profile</a>
+        <a href="#">Support</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
     </div>
-  </div>
 
-  <script>
-    document.getElementById("mobileMenuContainer").innerHTML = `
-    <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70" position="absolute"></iframe>
-  `;
 
-    // Function to update the top navbar title
-    function updateTopNavbarTitle(title) {
-      const topNavbarFrame = document.getElementById("topNavbarFrame");
-      if (topNavbarFrame && topNavbarFrame.contentWindow) {
-        topNavbarFrame.contentWindow.postMessage(
-          { type: "updateTitle", title },
-          "*"
-        );
-      }
-    }
-
-    // Example: Update the top navbar title when a page is loaded
-    window.addEventListener("load", function () {
-      const pageTitle = document.title;
-      updateTopNavbarTitle(pageTitle);
-    });
-
-    // Handle dropdown logic in the parent document
-    window.addEventListener("message", function (event) {
-      if (event.data && event.data.type === "toggleDropdown") {
-        const dropdownOverlay = document.getElementById("dropdownOverlay");
-        if (dropdownOverlay) {
-          dropdownOverlay.classList.toggle("show");
-          // Add class for smooth sliding when closing
-          if (!dropdownOverlay.classList.contains("show")) {
-            dropdownOverlay.classList.add("hide");
-          } else {
-            dropdownOverlay.classList.remove("hide");
-          }
+    <script>
+      document.getElementById("mobileMenuContainer").innerHTML = `
+        <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70" position="absolute"></iframe>
+      `;
+    
+      // Function to update the top navbar title
+      function updateTopNavbarTitle(title) {
+        const topNavbarFrame = document.getElementById("topNavbarFrame");
+        if (topNavbarFrame && topNavbarFrame.contentWindow) {
+          topNavbarFrame.contentWindow.postMessage(
+            { type: "updateTitle", title },
+            "*"
+          );
         }
       }
-    });
-  </script>
+    
+      // Function to close the dropdown
+      function closeDropdown() {
+        const dropdownOverlay = document.getElementById("dropdownOverlay");
+        if (dropdownOverlay) {
+          dropdownOverlay.classList.remove("show");
+          dropdownOverlay.classList.add("hide");
+        }
+      }
+    
+      // Example: Update the top navbar title when a page is loaded
+      window.addEventListener("load", function () {
+        const pageTitle = document.title;
+        updateTopNavbarTitle(pageTitle);
+      });
+    
+      // Handle dropdown logic in the parent document
+      window.addEventListener("message", function (event) {
+        if (event.data && event.data.type === "toggleDropdown") {
+          const dropdownOverlay = document.getElementById("dropdownOverlay");
+          if (dropdownOverlay) {
+            dropdownOverlay.classList.toggle("show");
+            // Add class for smooth sliding when closing
+            if (!dropdownOverlay.classList.contains("show")) {
+              dropdownOverlay.classList.add("hide");
+            } else {
+              dropdownOverlay.classList.remove("hide");
+            }
+          }
+        }
+      });
+    </script>
+
 
     <!-- Include the mobile bottom menu -->
     <div id="mobileBottomMenuContainer"></div>

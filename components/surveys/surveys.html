@@ -144,16 +144,21 @@
 
     <!-- Include the mobile top menu -->
     <div id="dropdownOverlay">
-      <button class="profile-button">
-        <span class="navbar-icon"><i class="fa-solid fa-user"></i></span>
-      </button>
+      <div class="dropdown-image">
+        <img
+          src="/images/pexels-karolina-grabowska-5206931.jpg"
+          alt="Profile Image"
+        />
+      </div>
       <div class="dropdown-content">
-        <button class="close-button" onclick="closeDropdown()">&#10006;</button>
         <a href="#">Profile</a>
         <a href="#">Support</a>
         <a href="#">Settings</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
         <a href="#">Logout</a>
       </div>
+      <button class="close-button" onclick="closeDropdown()">&#10006;</button>
     </div>
 
     <script>
@@ -202,18 +207,6 @@
           }
         }
       });
-
-      // Fetch the rewardUnlocked value
-      // This code fetches the rewardUnlocked value to verify the amount of surveys that have been filled in by the user.
-      let currentCount = parseInt(localStorage.getItem("rewardUnlocked"), 10);
-      // Fix for the NaN result bug
-      currentCount = isNaN(parseInt(currentCount, 10))
-        ? 0
-        : parseInt(currentCount, 10);
-      localStorage.setItem("rewardUnlocked", currentCount);
-      // This makes the amount into a text format so that I can add it to the page
-      document.getElementById("rewardUnlocked").textContent = currentCount;
-      console.log(currentCount);
     </script>
 
     <!-- Include the mobile bottom menu -->

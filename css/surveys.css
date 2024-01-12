@@ -12,11 +12,11 @@
     flex-direction: row;
     margin-top: 20px;
     gap: 10px;
-    padding: 0 10px;
+    padding: 0;
     width: 100%;
     overflow-x: auto;
-        white-space: nowrap;
-        scrollbar-width: none;
+    white-space: nowrap;
+    scrollbar-width: none;
 }
 
 .filter-buttons button {

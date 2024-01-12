@@ -14,6 +14,46 @@
     color: #ffffff;
 }
 
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+#searchButton {
+    padding: 10px 15px;
+    background-color: #9A9AFF;
+    color: #fff;
+    border: 1px solid #9A9AFF;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+.support-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.support-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
 
 .card-body{
     display: flex;
@@ -27,12 +67,56 @@
     color: #ffffff;
 }
 
-.input-group{
+.card-icon-title{
     display: flex;
-    flex-direction:row;
+    align-items: center;
+    gap: 10px;
 }
 
-#search-button{
+.card-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     background-color: #9A9AFF;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon i{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+#question-icon{
+    background-color: #72D9FF;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-content a{
+    color: black;
+    text-decoration: none;
+}
+
+.icon-link-container{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: start;
+}
+
+.icon-link-container i{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.icon-link-container a{
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
 }

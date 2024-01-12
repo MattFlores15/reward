@@ -47,8 +47,10 @@
         <div class="flowers-badge-count">
           <h2>Je hebt <span id="flowerCount">0</span> bloemenbadges verdiend!</h2>
         </div>
+        <div class="progress-content">
         <div class="bar-container">
-        <div id="progress-bar"></div></div>
+        <div id="progress-bar"></div></div><div class="progress-bar-amount"><p>7/10</p></div></div>
+        <div class="next-badge-text"><p>Surveys until next badge...</p></div>
         <div id="badges-container">
           <!-- Empty badge slots -->
           <div class="badge" id="badge1" onclick="showModal(1)"></div>
@@ -273,7 +275,7 @@ function closeModal() {
 
 // You can implement logic to update the progress bar dynamically based on user's progress
 // For simplicity, the progress bar is set to 50% in the example.
-document.getElementById('progress-bar').style.width = '50%';
+document.getElementById('progress-bar').style.width = '75%';
 
 // Load badges when the script is executed
 loadBadges();

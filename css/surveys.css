@@ -1,3 +1,12 @@
+.container-filter {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 20px;
+    padding: 0 !important;
+    width: 100%;
+}
+
 .filter-buttons {
     display: flex;
     flex-direction: row;

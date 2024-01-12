@@ -36,24 +36,70 @@
     </div>
     
 
-    <!-- Include the mobile top menu -->
+   <!-- Include the mobile top menu -->
+    <div id="dropdownOverlay">
+      <div class="dropdown-image">
+        <img
+          src="/images/pexels-karolina-grabowska-5206931.jpg"
+          alt="Profile Image"
+        />
+      </div>
+      <div class="dropdown-content">
+        <a href="#">Profile</a>
+        <a href="#">Support</a>
+        <a href="#">Settings</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Logout</a>
+      </div>
+      <button class="close-button" onclick="closeDropdown()">&#10006;</button>
+    </div>
+
     <script>
       document.getElementById("mobileMenuContainer").innerHTML = `
-        <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70"></iframe>
+        <iframe id="topNavbarFrame" src="/components/top-navbar/top-navbar.html" frameborder="0" width="100%" height="70" position="absolute"></iframe>
       `;
 
       // Function to update the top navbar title
       function updateTopNavbarTitle(title) {
-        const topNavbarFrame = document.getElementById('topNavbarFrame');
+        const topNavbarFrame = document.getElementById("topNavbarFrame");
         if (topNavbarFrame && topNavbarFrame.contentWindow) {
-          topNavbarFrame.contentWindow.postMessage({ type: 'updateTitle', title }, '*');
+          topNavbarFrame.contentWindow.postMessage(
+            { type: "updateTitle", title },
+            "*"
+          );
+        }
+      }
+
+      // Function to close the dropdown
+      function closeDropdown() {
+        const dropdownOverlay = document.getElementById("dropdownOverlay");
+        if (dropdownOverlay) {
+          dropdownOverlay.classList.remove("show");
+          dropdownOverlay.classList.add("hide");
         }
       }
 
       // Example: Update the top navbar title when a page is loaded
-      window.addEventListener('load', function () {
+      window.addEventListener("load", function () {
         const pageTitle = document.title;
         updateTopNavbarTitle(pageTitle);
+      });
+
+      // Handle dropdown logic in the parent document
+      window.addEventListener("message", function (event) {
+        if (event.data && event.data.type === "toggleDropdown") {
+          const dropdownOverlay = document.getElementById("dropdownOverlay");
+          if (dropdownOverlay) {
+            dropdownOverlay.classList.toggle("show");
+            // Add class for smooth sliding when closing
+            if (!dropdownOverlay.classList.contains("show")) {
+              dropdownOverlay.classList.add("hide");
+            } else {
+              dropdownOverlay.classList.remove("hide");
+            }
+          }
+        }
       });
     </script>
 

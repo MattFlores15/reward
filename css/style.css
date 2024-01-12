@@ -12,6 +12,14 @@ body {
   text-decoration: none !important;
 }
 
+body h1 {
+  text-decoration: none !important;
+}
+
+body h2 {
+  color: #9A9AFF;
+}
+
 body a {
   text-decoration: none !important;
 }
@@ -394,12 +402,6 @@ button:last-child {
   border: 1px solid rgba(0,0,0,.125);
   border-radius: 10px;
   box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-}
-
-.mt-4 {
-  padding: 0 20px;
-  gap: 20px;
-  
 }
 
 .card-text {

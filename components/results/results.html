@@ -42,12 +42,39 @@
           </a>
         </div>
     <div class="container">
+      <div id="progress-container">
+        <!-- Display earned flower badges -->
+        <div class="flowers-badge-count">
+          <h2>Je hebt <span id="flowerCount">0</span> bloemenbadges verdiend!</h2>
+        </div>
+        <div class="bar-container">
+        <div id="progress-bar"></div></div>
+        <div id="badges-container">
+          <!-- Empty badge slots -->
+          <div class="badge" id="badge1" onclick="showModal(1)"></div>
+          <div class="badge" id="badge2" onclick="showModal(2)"></div>
+          <div class="badge" id="badge3" onclick="showModal(3)"></div>
+          <div class="badge" id="badge4" onclick="showModal(4)"></div>
+          <div class="badge" id="badge5" onclick="showModal(5)"></div>
+          <div class="badge" id="badge6" onclick="showModal(6)"></div>
+        </div>
+      </div>
 
-      <!-- Display earned flower badges -->
-    <div class="flowers-badge-count">
-      <p>Je hebt <span id="flowerCount">0</span> bloemenbadges verdiend!</p>
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Flower Information</h2>
+      <p>This flower represents your contribution to improving working conditions and healthcare.</p>
+      <!-- Additional information about the flower -->
     </div>
+  </div>
+
+      
     <div class="results-container mt-4">
+      <div class="title-container">
+        <h2 class="results-title">Metrics</h2>
+      </div>
       <div class="col-md-3 mb-3">
         <a href="/components/surveys/surveys.html" class="card-link">
           <div class="card results-card">
@@ -175,21 +202,81 @@
 
     document.getElementById("flowerCount").innerText = flowerCount;
 
-    // Display earned flower badges based on the flowerCount
-    for (let i = 0; i < flowerCount; i++) {
-      switch (i) {
-        case 0:
-          showSunflower();
-          break;
-        case 1:
-          showLavender();
-          break;
-        case 2:
-          showRose();
-          break;
-        // Add more cases if needed
+  var badges = [
+    {
+      "id": 1,
+      "image": "/images/sunflower.png",
+      "name": "Flower 1",
+      "description": "This flower represents your dedication to healthcare improvement."
+    },
+    {
+      "id": 2,
+      "image": "/images/plants/lavender-add.png",
+      "name": "Flower 2",
+      "description": "This flower symbolizes your commitment to better working conditions."
+    },
+    {
+      "id": 3,
+      "image": "/images/plants/rose-add.png",
+      "name": "Flower 3",
+      "description": "Your contribution with this flower impacts the healthcare industry positively."
+    },
+  ]
+
+
+
+ // Function to load badges from the JSON file
+  function loadBadges() {
+  // Check if badges array is available
+  if (badges && badges.length > 0) {
+    // Loop through the available badges (up to the first three)
+    for (let i = 0; i < Math.min(badges.length, 3); i++) {
+      const badge = badges[i];
+      const badgeElement = document.getElementById(`badge${i + 1}`);
+
+      // Check if the badge element exists before updating its properties
+      if (badgeElement) {
+        badgeElement.style.backgroundImage = `url(${badge.image})`;
+        badgeElement.setAttribute('data-name', badge.name);
+        badgeElement.setAttribute('data-description', badge.description);
       }
     }
+  }
+}
+
+
+// Function to show the modal and update the content based on the badge clicked
+function showModal(badgeNumber) {
+  const modal = document.getElementById('modal');
+  const badgeElement = document.getElementById(`badge${badgeNumber}`);
+
+  // Update modal content based on the badge information
+  const badgeName = badgeElement.getAttribute('data-name');
+  const badgeDescription = badgeElement.getAttribute('data-description');
+  const modalContent = document.querySelector('.modal-content');
+  modalContent.innerHTML = `
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img src="${badgeElement.style.backgroundImage.slice(4, -1).replace(/"/g, "")}" class="modal-badge" alt="Flower Image">
+    <h2>${badgeName}</h2>
+    <p>${badgeDescription}</p>
+    <!-- Additional information about the flower -->
+  `;
+
+  modal.style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
+}
+
+// You can implement logic to update the progress bar dynamically based on user's progress
+// For simplicity, the progress bar is set to 50% in the example.
+document.getElementById('progress-bar').style.width = '50%';
+
+// Load badges when the script is executed
+loadBadges();
   </script>
 </body>
 </html>

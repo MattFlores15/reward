@@ -29,6 +29,74 @@ body p {
   font-size: 16px !important;
 }
 
+.onboarding-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  background-color: #fbfbfb;
+  padding: 25px;
+}
+
+.onboarding-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #9A9AFF;
+  margin: 0;
+}
+
+.onboarding-container p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  margin: 0;
+}
+
+.onboarding-text .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.onboarding-text .text p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+.onboarding-image {
+  align-self: flex-start;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: contents;
+}
+
+.img-resize {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+
+.onboarding-button button{
+  width: 255px; 
+  height: 60px; 
+  background-color: #9a9aff;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
 .container {
   padding-bottom: 80px;
   /* width: 100vw; */
@@ -285,10 +353,7 @@ body p {
   text-align: center;
 }
 
-.img-resize {
-  width: 60%;
-  height: auto;
-}
+
 
 .bottom-buttons {
   background-color: #72D9FF;

@@ -5,6 +5,9 @@ sunflower-planted
 <a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by Freepik - Flaticon</a>
 
 rose-add
+<a href="https://www.flaticon.com/free-icons/rose" title="rose icons">Rose icons created by Flat Icons - Flaticon</a>
+
+rose-add-old
 <a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by Freepik - Flaticon</a>
 
 rose-planted
